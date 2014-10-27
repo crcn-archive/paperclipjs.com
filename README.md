@@ -1,4 +1,9 @@
-paperclipjs.com
-===============
+Main website. 100% Mojo.
 
-paperclip website
+
+### Commands
+
+```
+npm start       # start the server
+npm run hotswap # run hotswap server
+```

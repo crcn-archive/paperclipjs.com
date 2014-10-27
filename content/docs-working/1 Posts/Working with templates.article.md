@@ -1,0 +1,5 @@
+{{
+  properties: {
+    category: "guides"
+  }
+}}

@@ -1,0 +1,11 @@
+{{
+  browserify: {
+    component: "ide",
+    file: files,
+    projectName: projectName,
+    showPreview: showPreview,
+    tabs: tabs,
+    compile: compile,
+    theme: theme
+  }
+}}
