@@ -2,6 +2,28 @@
   "name": "paperclipjs.com",
   "version": "1.0.0",
   "dependencies": {
+    "bindable-object": {
+      "version": "0.0.6",
+      "from": "bindable-object@*",
+      "resolved": "http://registry.npmjs.org/bindable-object/-/bindable-object-0.0.6.tgz",
+      "dependencies": {
+        "fast-event-emitter": {
+          "version": "0.0.2",
+          "from": "fast-event-emitter@>=0.0.0 <0.1.0",
+          "resolved": "http://registry.npmjs.org/fast-event-emitter/-/fast-event-emitter-0.0.2.tgz"
+        },
+        "protoclass": {
+          "version": "0.0.6",
+          "from": "protoclass@0.0.6",
+          "resolved": "http://registry.npmjs.org/protoclass/-/protoclass-0.0.6.tgz"
+        },
+        "toarray": {
+          "version": "0.0.1",
+          "from": "toarray@0.0.1",
+          "resolved": "http://registry.npmjs.org/toarray/-/toarray-0.0.1.tgz"
+        }
+      }
+    },
     "brace": {
       "version": "0.4.0",
       "from": "brace@*",
