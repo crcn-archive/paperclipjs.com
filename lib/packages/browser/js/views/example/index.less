@@ -1,0 +1,48 @@
+.example {  
+
+  height: 300px;
+
+  & .tabs {
+    & .tab {
+      border: 3px solid #222;
+      .border-top-left-radius(5px);
+      .border-top-right-radius(5px);
+      border-bottom: 0px;
+      margin-left: 8px;
+      display:inline-block;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      text-decoration: none;
+      padding-left: 15px;
+      padding-right: 15px;
+      color: #222;
+
+      &.selected {
+        color: #C5C8C6;
+        background-color: #222;
+      }
+    }
+  }
+
+  & .content {
+    border: 3px solid #222;
+    .border-radius(5px);
+    height: 100%;
+    & .editor {
+      padding: 15px;
+      background-color: #222;
+      height: 100%;
+    }
+
+    & .preview {
+      height: 100%;
+      padding: 15px;
+
+      &-inner {
+        overflow: scroll;
+        height: 100%;
+      }
+    }
+  }
+
+}

@@ -1,6 +1,23 @@
-{{#each:files, as:'file'}}
-  <a href="#" onClick={{setFile(file)}}>{{file.name}}</a>&nbsp;
-{{/}}
+<div class="example">
 
-{{ html: editor  }}
-{{ html: preview }}
+  <div class="row tabs">
+    <div class="col-sm-12">
+      {{#each:files, as:'file'}}
+        <a href="#" class="tab {{ file.selected ? 'selected' : '' }}" onClick={{setFile(file)}}>{{file.name}}</a>
+      {{/}}
+    </div>
+  </div>
+
+  <div class="row content">
+
+    <div class="editor col-sm-6">
+      {{ html: editor  }}
+    </div>
+
+    <div class="preview col-sm-6">
+      <div class="preview-inner">
+        {{ html: preview }}
+      </div>
+    </div>
+  </div>
+</div>

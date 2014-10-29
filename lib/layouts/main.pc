@@ -3,8 +3,8 @@
   <head>
     <!--link rel="stylesheet" href="/vendor/rainbow/themes/tomorrow.css" />
     <script type="text/javascript" src="/app/index.built.js"></script-->
-    <link rel="stylesheet" href="/app.bundle.css" />
     <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/app.bundle.css" />
 
     <title>Paperclip.js - fast template engine for the DOM</title>
 

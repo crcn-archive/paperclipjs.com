@@ -2,15 +2,11 @@
 
 <!--
 {
-    projects: Array.apply(null, new Array(4000)).map(function (a, i) {
-        return {
-            i: i
-        }
-    }).reverse()
+    projects: _.range(5)
 }
 -->
 ```html
-{{#each:projects}}
+{{#each:projects,as:'i'}}
     missing something awesome {{i}}<br />
 {{/}}
 ```
