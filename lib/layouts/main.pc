@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/vendor/rainbow/themes/tomorrow.css" />
+    <script type="text/javascript" src="/app/index.built.js"></script>
+    <script type="text/javascript" src="/vendor/js/mojo.js"></script>
+    <link rel="stylesheet" href="/css/app.css" />
+
+    <title>Paperclip.js</title>
+
+    <!--meta property="og:image" content="http://wwww.mojojs.com/img/square-logo.png" /-->
+    <meta name="Paperclip" content="a" />
+
+
+  </head>
+  <body>
+
+  
+  <!--script type="text/javascript" src="/vendor/js/rainbow-custom.min.js"></script-->
+  </body>
+</html>

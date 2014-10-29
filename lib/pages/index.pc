@@ -1,0 +1,7 @@
+
+{{#layout:"main"}}
+main test
+{{#block:"test"}}
+  test block {{app.config.directories.public}}
+{{/}}
+{{/}}
