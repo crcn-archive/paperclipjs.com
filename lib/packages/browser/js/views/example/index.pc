@@ -1,0 +1,6 @@
+{{#each:files, as:'file'}}
+  <a href="#" onClick={{setFile(file)}}>{{file.name}}</a>&nbsp;
+{{/}}
+
+{{ html: editor  }}
+{{ html: preview }}

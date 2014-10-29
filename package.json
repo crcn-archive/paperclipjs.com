@@ -4,7 +4,7 @@
   "description": "Main website. 100% Mojo.",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,13 @@
   },
   "homepage": "https://github.com/mojo-js/paperclipjs.com",
   "dependencies": {
+    "brace": "^0.4.0",
+    "browserify-middleware": "^4.1.0",
     "compression": "^1.2.0",
     "glob": "^4.0.6",
     "less": "^1.7.5",
-    "memoizee": "^0.3.8"
+    "marked": "^0.3.2",
+    "memoizee": "^0.3.8",
+    "through": "^2.3.6"
   }
 }

@@ -1,7 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--link rel="stylesheet" href="/vendor/rainbow/themes/tomorrow.css" />
+    <script type="text/javascript" src="/app/index.built.js"></script-->
+    <script type="text/javascript" src="/app.bundle.js"></script>
+    <link rel="stylesheet" href="/app.bundle.css" />
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" />
 
-{{#layout:"main"}}
-main test
-{{#block:"test"}}
-  test block {{app.config.directories.public}}
-{{/}}
-{{/}}
+    <title>Paperclip.js - fast template engine for the DOM</title>
+
+    <!--meta property="og:image" content="http://wwww.mojojs.com/img/square-logo.png" /-->
+    <meta name="Paperclip" content="a" />
+
+
+  </head>
+  <body>
+    <div class="container">
+      {{ html: (__dirname + "/docs.md") | readfile | markdown }}
+    </div>
+
+  
+  <!--script type="text/javascript" src="/vendor/js/rainbow-custom.min.js"></script-->
+  </body>
+</html>
