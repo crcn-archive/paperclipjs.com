@@ -7,6 +7,6 @@
 -->
 ```html
 {{#each:projects,as:'i'}}
-    missing something awesome {{i}}<br />
+    missing something awesome {{~i}}<br />
 {{/}}
 ```

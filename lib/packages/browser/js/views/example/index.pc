@@ -5,6 +5,10 @@
       {{#each:files, as:'file'}}
         <a href="#" class="tab {{ file.selected ? 'selected' : '' }}" onClick={{setFile(file)}}>{{file.name}}</a>
       {{/}}
+
+      <span class="benchmark">
+        {{#if:speed!=undefined}}{{speed}} ms{{/}} <button onClick={{ run() }}>run again</button>
+      </span>
     </div>
   </div>
 
