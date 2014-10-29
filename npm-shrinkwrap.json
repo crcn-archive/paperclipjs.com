@@ -1930,6 +1930,11 @@
       "version": "2.3.6",
       "from": "through@>=2.3.6 <3.0.0",
       "resolved": "http://registry.npmjs.org/through/-/through-2.3.6.tgz"
+    },
+    "traverse": {
+      "version": "0.6.6",
+      "from": "traverse@*",
+      "resolved": "http://registry.npmjs.org/traverse/-/traverse-0.6.6.tgz"
     }
   }
 }
