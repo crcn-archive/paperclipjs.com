@@ -2,6 +2,11 @@
   "name": "paperclipjs.com",
   "version": "1.0.0",
   "dependencies": {
+    "bindable-collection": {
+      "version": "0.0.2",
+      "from": "bindable-collection@*",
+      "resolved": "http://registry.npmjs.org/bindable-collection/-/bindable-collection-0.0.2.tgz"
+    },
     "bindable-object": {
       "version": "0.0.6",
       "from": "bindable-object@0.0.6",
