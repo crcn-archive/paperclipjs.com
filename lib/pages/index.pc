@@ -2,7 +2,7 @@
 
   <div class="row subheader">
     <div class="col-sm-12">
-      <h2>Compiled template engine for the DOM</h2>
+      <h2>Compiled templates for the DOM</h2>
       <!--h4>Paperclip leverages native DOM api's to make your JavaScript templates incredibly fast</h4-->
       <!--p>Paperclip leverages native DOM API's (cloneNode(true)) to make </p-->
     </div>
