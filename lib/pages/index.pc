@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!--link rel="stylesheet" href="/vendor/rainbow/themes/tomorrow.css" />
-    <script type="text/javascript" src="/app/index.built.js"></script-->
-    <script type="text/javascript" src="/app.bundle.js"></script>
-    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="/app.bundle.css" />
+{{#layout:"main"}}
 
-    <title>Paperclip.js - fast template engine for the DOM</title>
-
-    <!--meta property="og:image" content="http://wwww.mojojs.com/img/square-logo.png" /-->
-    <meta name="Paperclip" content="a" />
-
-
-  </head>
-  <body>
-    <div class="container">
-      {{ html: (__dirname + "/docs.md") | readfile | markdown }}
+  <div class="row subheader">
+    <div class="col-sm-12">
+      <h2>Compiled template engine for the DOM</h2>
+      <!--h4>Paperclip leverages native DOM api's to make your JavaScript templates incredibly fast</h4-->
+      <!--p>Paperclip leverages native DOM API's (cloneNode(true)) to make </p-->
     </div>
+  </div>
 
-  
-  <!--script type="text/javascript" src="/vendor/js/rainbow-custom.min.js"></script-->
-  </body>
-</html>
+
+  <div class="row feature-header">
+
+  </div>
+
+
+{{/}}

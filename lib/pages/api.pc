@@ -1,0 +1,5 @@
+{{#layout:"main"}}
+  <div class="api">
+    {{ html: (__dirname + "/docs.md") | readfile | markdown }}
+  </div>
+{{/}}

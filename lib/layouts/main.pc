@@ -3,22 +3,40 @@
   <head>
     <!--link rel="stylesheet" href="/vendor/rainbow/themes/tomorrow.css" />
     <script type="text/javascript" src="/app/index.built.js"></script-->
+    <script type="text/javascript" src="/app.bundle.js"></script>
     <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="/app.bundle.css" />
 
     <title>Paperclip.js - fast template engine for the DOM</title>
 
     <!--meta property="og:image" content="http://wwww.mojojs.com/img/square-logo.png" /-->
-    <meta name="Paperclip" content="a" />
+    <meta name="Paperclip" content="fast, compiled template engine for the DOM" />
 
 
   </head>
   <body>
-    <div class="container">
-      
-    </div>
 
-  
-  <!--script type="text/javascript" src="/vendor/js/rainbow-custom.min.js"></script-->
+    <a href="https://github.com/mojo-js/paperclip.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" /></a>
+
+    <div class="container content">
+
+      <div class="row header">
+        <div class="logo">
+          <a href="/">Paperclip</a>
+        </div>
+        <div class="links">
+          <a href="/api">API</a>
+          <a href="/advanced-api">Advanced API</a>
+        </div>
+      </div>
+
+      {{html:blocks.main}}
+      
+      <div class="row footer">
+        Released under the <a href="http://opensource.org/licenses/mit-license.php">MIT License</a><br />
+        Built by <a href="http://craigjefferds.com">Craig Condon</a>
+      </div>
+
+    </div>
   </body>
 </html>
