@@ -1,12 +1,32 @@
-## some docs
+## Dots
 
 <!--
-{
-    projects: _.shuffle(_.range(200))
+function () {
+
+  var dots = _.range(100).map(function (i) {
+    return new BindableObject({i:i});
+  });
+
+  var interval = setInterval(function () {
+    for (var i = dots.length; i--;) dots[i].set("i", dots[i].i + 1);
+  }, 100);
+ 
+
+  return {
+    dots: dots,
+    dispose: function () {
+      clearInterval(interval);
+      console.log("dispose");
+    }
+  }
 }
+
 -->
+
 ```html
-{{#each:projects,as:'i'}}
-    missing something awesome {{~i}}<br />
-{{/}}
+<ul>
+  {{#each:dots,as:'dot'}}
+    <li>{{dot.i}}</li>
+  {{/}}
+</ul>
 ```

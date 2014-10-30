@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mojo-js/paperclipjs.com",
   "dependencies": {
+    "bindable-collection": "0.0.2",
     "bindable-object": "0.0.6",
     "brace": "^0.4.0",
     "browserify-middleware": "^4.1.0",
