@@ -16,7 +16,6 @@ function () {
     dots: dots,
     dispose: function () {
       clearInterval(interval);
-      console.log("dispose");
     }
   }
 }
