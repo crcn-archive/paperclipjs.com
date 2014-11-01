@@ -220,8 +220,8 @@ Executed when an event is fired on the DOM element. Here are all the available e
 
 - `onChange` - called when an element changes
 - `onClick` - called when an element is clicked
-- `onLoad` - called when an element loads - useful for `&lt;img /&gt;`
-- `onSubmit` - called on submit - useful for `&lt;form /&gt;`
+- `onLoad` - called when an element loads - useful for `<img />`
+- `onSubmit` - called on submit - useful for `<form />`
 - `onMouseDown` - called on mouse down
 - `onMouseUp` - called on mouse up
 - `onMouseOver` - called on mouse over
