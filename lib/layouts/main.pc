@@ -22,7 +22,7 @@
 
       <div class="row header">
         <div class="logo">
-          <a href="/">Paperclip</a>
+          <a href="/">Paperclip.js</a>
         </div>
         <div class="links">
           <!--a href="/perf">Performance</a-->
