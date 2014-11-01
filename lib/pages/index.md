@@ -1,4 +1,4 @@
-Paperclip is a template engine designed for the DOM. It works by leveraging the browser's built-in cloneNode() method whenever a template is used. The result is blazing-fast rendering.
+Paperclip is a template engine designed for the DOM. It works by leveraging the browser's built-in cloneNode() method whenever a template is used. The result is [blazing-fast rendering](http://jsperf.com/pc-templating-comparison).
 
 <!--
 {
