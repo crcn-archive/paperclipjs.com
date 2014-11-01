@@ -7,7 +7,7 @@ Paperclip is a template engine designed for the DOM. It works by leveraging the 
 -->
 
 ```html
-Rendering <strong>{{numbers.length}}</strong> items: <br />
+Rendering <strong>{{numbers.length}}</strong> numbers: <br />
 
 {{#each:numbers,as:'number'}}
   {{number}} <br />
@@ -31,8 +31,6 @@ What's your name?
 
 <!-- 
   <~> - bind both ways
-  <~  - bind changes from property
-  ~>  - bind changes to property
   ~   - don't watch for changes
 -->
 
