@@ -34,8 +34,10 @@
       {{html:blocks.main}}
       
       <div class="row footer">
-        Released under the <a href="http://opensource.org/licenses/mit-license.php">MIT License</a><br />
-        Built by <a href="http://craigjefferds.com">Craig Condon</a>
+        <div class="col-sm-12">
+          Released under the <a href="http://opensource.org/licenses/mit-license.php">MIT License</a><br />
+          Built by <a href="http://craigjefferds.com">Craig Condon</a>
+        </div>
       </div>
 
     </div>
