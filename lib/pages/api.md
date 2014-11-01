@@ -1,79 +1,11 @@
 
 
-Paperclip is a very fast template engine for JavaScript.
-
-
-### Features
-
-- compiled templates
-- inline javascript
-- explicit data-binding (one-way, two-way, unbound operators)
-- works with older browsers (IE 8+ tested)
-- accepts vanilla objects
-- works with NodeJS
-- supports custom pollyfills
-- customizable rendering engine.
-
-### Examples
-
-- [50k items in 1.5 seconds](http://requirebin.com/?gist=02cb9f69551a6032ad93)
-- [simple number incrementer](http://requirebin.com/?gist=8be78007f4cb70da67b1)
-- [inline html](http://requirebin.com/?gist=bbb9b0eaccd3d7e41df1)
-- [custom block components](http://requirebin.com/?gist=858e3b7928eea5e1bed6)
-- [each block](http://requirebin.com/?gist=d716391c84986bdf4878)
-
-
-### Performance
-
-
-Paperclip templates are translated from HTML, straight to JavaScript - this also includes data-bindings. For example, here's a template:
-
-```html
-hello {{name}}!
-```
-
-Here's the templated translated to JavaScript:
-
-```javascript
-module.exports = (function(fragment, block, element, text, comment, parser, modifiers) {
-  return fragment([text("hello "), block({
-    'value': {
-      run: function() {
-          return this.context.name;
-      },
-      refs: [ ["name"] ]
-    }
-  })]);
-});
-```
-
-Pretty clear what's going on. Here's what we know at a glance:
-
-<!--
-More stuff here - no innerHTML, DOM abstractions. Generated template item is a DOM element.
--->
-
-1. Generated DOM is identical to the HTML templates. No weird manipulations here.
-2. Data-bindings are identified *as the template is created*. Note that this happens *once* for every template. Paperclip takes each translated template, caches them, and uses the browser's native `cloneNode()` whenever a template is used. 
-3. JavaScript references within the templates are identified at translation time, and cached in the data-binding.
-
-As it turns out, the method above for generating templates is very efficient. Essentially, paperclip does the least amount of work necessary to update the DOM since it know where everything is. 
-
-Paperclip will also lazily batch DOM changes together into one update, and run them on requestAnimationFrame. This kind of optimization is similar to how layout engines work, and helps prevent
-unnecessary performance penalties in the browser.
-
-
-### Installation
-
-```
-npm install paperclip --save-exact
-```
-
 ## Basic API
 
 #### template template(source)
 
 Creates a new template
+
 
 ```javascript
 var pc = require("paperclip");
@@ -114,6 +46,14 @@ document.body.appendChild(template.bind({
 
 Variable blocks as placeholders for information that might change. For example:
 
+<!--
+{
+  name: {
+    first: "Tom",
+    last: "Hanks"
+  }
+}
+-->
 
 ```html
 hello {{ name.first }} {{ name.last }}!
@@ -121,11 +61,23 @@ hello {{ name.first }} {{ name.last }}!
 
 You can also specify blocks within attributes.
 
+<!--
+{
+  color: "blue"
+}
+-->
+
 ```html
 my favorite color is <span style="color: {{color}}">{{color}}</span>
 ```
 
 Paperclip also supports **inline javascript**. For example:
+
+<!--
+{
+  message: undefined
+}
+-->
 
 ```html
 hello {{ message || "World" }}! <br />
@@ -137,20 +89,25 @@ inline-json {{ {'5+10 is':5+10, 'message is defined?' : message ? 'yes' : 'no' }
 Modifiers format data in a variable block. A good example of this might be presenting data to the user depending on their locale, or parsing data into markdown. Here are a few examples of how you can use
 modifiers:
 
+<!--
+function () {
+
+  paperclip.modifier("divide", function (age, number) {
+    return age/number;
+  });
+
+  paperclip.modifier("round", function (number) {
+    return Math.round(number);
+  });
+
+  return {
+    age: 30
+  };
+}
+-->
 
 ```html
-
-Converting content to markdown:
-
-{{ html: content | markdown }}
-
-Uppercasing & converting to markdown:
-
-{{ html: content | uppercase | markdown }}
-
-Modifiers with parameters:
-
-A human that is {{age}} years old is like a {{ age | divide(5.6) }} year old dog!
+A human that is {{age}} years old is like a {{ age | divide(5.6) | round }} year old dog!
 ```
 
 
@@ -159,19 +116,25 @@ A human that is {{age}} years old is like a {{ age | divide(5.6) }} year old dog
 Paperclip comes with various binding operators that give you full control over how references are handled. You can easily
 specify whether to bind one way, two ways, or not at all. Here's the basic syntax:
 
-```javascript
+<!--
+{
+  name: "Emma Stone"
+}
+-->
+
+```html
 Two-way binding:
-<input class="form-control" data-bind="{{ model: <~>fullName }}" />
+<input class="form-control" model="{{ <~>name }}" />
 
-Bind input value to fullName only:
-<input class="form-control" data-bind="{{ model: ~>fullName }}" />
+Bind input value to name only:
+<input class="form-control" model="{{ ~>name }}" />
 
-Bind fullName to input value only:
+Bind name to input value only:
 
-<input class="form-control" data-bind="{{ model: <~fullName }}" />
+<input class="form-control" model="{{ <~name }}" />
 
 Unbound helper - don't watch for any changes:
-{{ ~fullName }}
+{{ ~name }}
 ```
 
 ### Built-in components
@@ -179,6 +142,12 @@ Unbound helper - don't watch for any changes:
 #### {{ html: content }}
 
 Similar to escaping content in mustache (`{{{content}}}`). Good for security.
+
+<!--
+{
+  content: "hello <strong>world</strong>!"
+}
+-->
 
 ```html
 Unsafe:
@@ -192,8 +161,14 @@ Safe:
 
 Conditional block helper
 
+<!--
+{
+  age: 24
+}
+-->
+
 ```html
-<input type="text" class="form-control" placeholder="What's your age?" data-bind="{{ model: <~>age }}"></input>
+<input type="text" class="form-control" placeholder="What's your age?" model="{{ <~>age }}"></input>
 {{#if: age >= 18 }}
   You're legally able to vote in the U.S.
 {{/elseif: age > 16 }}
@@ -203,23 +178,28 @@ Conditional block helper
 {{/}}
 ```
 
-### data-bind attributes
+### data binding attributes
 
-data-bind attributes are inspired by [knockout.js](http://knockoutjs.com/). This is useful if you want to attach behavior to any DOM element.
-
+Below are a list of data binding attributes you can use with elements.
 
 #### {{ model: context }}
 
-Input data-binding
+Input data binding
+
+<!--
+{
+  message: "What's up?"
+}
+-->
 
 ```html
-<input type="text" class="form-control" placeholder="Type in a message" data-bind="{{ model: <~>message }}"></input>
+<input type="text" class="form-control" placeholder="Type in a message" model="{{ <~>message }}"></input>
 <h3>{{message}}</h3>
 ```
 
 Notice the `<~>` operator. This tells paperclip to bind both ways. See [binding operators](#binding-operators) for more info.
 
-#### {{ event: expression }}
+#### onEvent={{ expression }}
 
 Executed when an event is fired on the DOM element. Here are all the available events:
 
@@ -236,77 +216,51 @@ Executed when an event is fired on the DOM element. Here are all the available e
 - `onEnter` - called on enter key up
 - `onDelete` - called on delete key up
 
+<!--
+{
+  
+}
+-->
+
 ```html
-<input type="text" class="form-control" placeholder="Type in a message" data-bind="{{ onEnter: enterPressed = true, focus: true }}"></input>
+<input type="text" class="form-control" placeholder="Type in a message" onEnter="{{ enterPressed = true }}"></input>
 
 {{#if: enterPressed }}
   enter pressed
 {{/}}
 ```
 
-
-#### {{ show: bool }}
+#### show={{ bool }}
 
 Toggles the display mode of a given element. This is similar to the `{{if:expression}}` conditional helper.
 
 
-#### {{ css: styles }}
-
-Sets the css of a given element. [For example](http://jsfiddle.net/JTxdM/81/):
-
-```html
-how hot is it (fahrenheit)?: <input type="text" class="form-control" data-bind="{{ model: <~>temp }}"></input> <br />
-
-<style type="text/css">
-.cool { color: blue;   }
-.warm { color: yellow; }
-.hot  { color: red;    }
-</style>
-
-<strong data-bind="{{
-  css: {
-    cool    : temp > 0 || !temp,
-    warm    : temp > 60,
-    hot     : temp > 90
-  }
-}}">
-  {{
-    temp > 60 ?
-    temp > 90 ? "it's hot" : "it's warm" :
-    "it's cool"
-  }}
-</strong>
-```
-
-#### {{ style: styles }}
-
-Sets the style of a given element.
-
-```html
-color: <input type="text" data-bind="{{ model: <~>color }}" class="form-control"></input> <br />
-size: <input type="text" data-bind="{{ model: <~>size }}" class="form-control"></input> <br />
-<span data-bind="{{
-  style: {
-    color       : color,
-    'font-size' : size
-  }
-}}">Hello World</span>
-```
-
-#### {{ disable: bool }}
+#### enable={{ bool }}
 
 Toggles the enabled state of an element.
 
+<!--
+{
+  formIsValid: false
+}
+-->
+
 ```html
-<button data-bind={{ disable: !formIsValid }}>Sign Up</button>
+<button class="btn btn-default" enable={{ formIsValid }}>Sign Up</button>
 ```
 
-#### {{ focus: bool }}
+#### focus={{ bool }}
 
 Focuses cursor on an element.
 
+<!--
+{
+  focus: false
+}
+-->
+
 ```html
-<input data-bind={{ focus: true }}></input>
+<input class="form-control" focus={{ focus }}></input>
 ```
 
 ### Advanced API
