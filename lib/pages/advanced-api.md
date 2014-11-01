@@ -16,7 +16,7 @@ var ComponentBlockBinding = pc.BaseBlockBinding.extend({
     this.section.appendChild(this.view.render());
     pc.BaseBlockBinding.prototype.bind.call(this, context);
   },
-  _onChange: function (properties) {
+  didChange: function (properties) {
     this.view.context.setProperties(properties);
   }
 });
@@ -42,7 +42,7 @@ this method
 
 Called when the block is removed from the DOM. This is a cleanup method.
 
-#### override _onChange(context)
+#### override didChange(context)
 
 Called whenever the properties change for the block binding. These properties are defined in the
 template. Here's the syntax:
@@ -68,6 +68,6 @@ the [document section](https://github.com/mojo-js/document-section.js) which con
 
 the content template - this might be undefined if your block binding doesn't have `{{#block:properties}}content{{/}}`.
 
-#### childBlockTemplate
+#### childTemplate
 
 The child block template. Used in the [conditional block](https://github.com/mojo-js/paperclip.js/blob/master/lib/paper/bindings/block/conditional.js).
