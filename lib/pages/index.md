@@ -10,7 +10,7 @@
 Rendering <strong>{{numbers.length}}</strong> numbers: <br />
 
 {{#each:numbers,as:'number'}}
-{{number}} <br />
+  {{number}} <br />
 {{/}}
 ```
 
