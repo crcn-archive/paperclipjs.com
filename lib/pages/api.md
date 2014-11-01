@@ -1,4 +1,6 @@
 
+## API
+
 #### template template(source)
 
 Creates a new template
@@ -35,7 +37,7 @@ document.body.appendChild(template.bind({
 }).render());
 ```
 
-## Template Syntax
+## Block Syntax
 
 #### {{ blocks }}
 
@@ -79,7 +81,7 @@ hello {{ message || "World" }}! <br />
 inline-json {{ {'5+10 is':5+10, 'message is defined?' : message ? 'yes' : 'no' } | json }}
 ```
 
-### Modifiers
+## Modifiers
 
 Modifiers format data in a variable block. A good example of this might be presenting data to the user depending on their locale, or parsing data into markdown. Here are a few examples of how you can use
 modifiers:
@@ -105,8 +107,7 @@ function () {
 A human that is {{age}} years old is like a {{ age | divide(5.6) | round }} year old dog!
 ```
 
-
-### Binding Operators
+## Binding Operators
 
 Paperclip comes with various binding operators that give you full control over how references are handled. You can easily
 specify whether to bind one way, two ways, or not at all. Here's the basic syntax:
@@ -132,7 +133,7 @@ Unbound helper - don't watch for any changes:
 {{ ~name }}
 ```
 
-### Built-in components
+## Built-in block helpers
 
 #### {{ html: content }}
 
@@ -173,7 +174,26 @@ Conditional block helper
 {{/}}
 ```
 
-### data binding attributes
+#### {{#each:source}}
+
+Creates a list of items. 
+
+- `as` - property to define for each iterated item. If this is omitted, the context of the embedded
+template will be the iterated item itself.
+
+<!--
+{
+  items: _.range(4)
+}
+-->
+
+```html
+{{#each:items,as:"i"}}
+  item {{i}} <br />
+{{/}}
+```
+
+## Attribute helpers
 
 Below are a list of data binding attributes you can use with elements.
 
