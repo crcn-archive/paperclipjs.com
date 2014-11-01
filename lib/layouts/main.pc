@@ -25,7 +25,7 @@
           <a href="/">Paperclip</a>
         </div>
         <div class="links">
-          <a href="/perf">Performance</a>
+          <!--a href="/perf">Performance</a-->
           <a href="/api">API</a>
           <a href="/advanced-api">Advanced API</a>
         </div>
