@@ -57,11 +57,11 @@ Paperclip works in the browser, and on the server.
 
 `bower install paperclip`
 
-Compressed Source Code:
+Production (50kb compressed):
 
 `https://raw.githubusercontent.com/mojo-js/paperclip.js/master/dist/paperclip.min.js`
 
-Uncompressed Source Code:
+Development:
 
 `https://raw.githubusercontent.com/mojo-js/paperclip.js/master/dist/paperclip.js`
 
