@@ -1444,9 +1444,8 @@
       }
     },
     "paperclip": {
-      "version": "0.6.14",
+      "version": "0.6.15",
       "from": "paperclip@>=0.6.14 <0.7.0",
-      "resolved": "http://registry.npmjs.org/paperclip/-/paperclip-0.6.14.tgz",
       "dependencies": {
         "async": {
           "version": "0.7.0",
