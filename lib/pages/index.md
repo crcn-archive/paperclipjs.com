@@ -18,7 +18,7 @@ Rendering <strong>{{numbers.length}}</strong> numbers: <br />
 
 ## Explicit data bindings
 
-Paperclip comes with a set of operations that offer you *complete* control over data flow. Define blocks that are unbound, two-way data-bound, or one-way data-bound.
+Paperclip comes with a set of operators that give you *complete* control over data flow. Define blocks that are unbound, two-way data-bound, or one-way data-bound.
 
 <!--
 {
