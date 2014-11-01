@@ -7,6 +7,8 @@
     </div>
   </div>
 
+  <!--hr /-->
+
   <!-- getting started -->
   <!-- block expressions -->
   <!-- explicit data-bindings -->
