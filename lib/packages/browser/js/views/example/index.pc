@@ -14,11 +14,11 @@
 
   <div class="row content">
 
-    <div class="editor col-sm-6">
+    <div class="editor col-sm-9">
       {{ html: editor  }}
     </div>
 
-    <div class="preview col-sm-6">
+    <div class="preview col-sm-3">
       <div class="preview-inner">
         {{ html: preview }}
       </div>
