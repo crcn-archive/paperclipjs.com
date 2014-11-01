@@ -1,3 +1,5 @@
 {{#layout:"main"}}
-  Advanced API
+  <div class="api">
+    {{ html: (__dirname + "/advanced-api.md") | readfile | markdown }}
+  </div>
 {{/}}
