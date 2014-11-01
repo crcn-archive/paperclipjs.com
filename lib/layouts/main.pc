@@ -10,7 +10,7 @@
     <title>Paperclip.js - fast template engine for the DOM</title>
 
     <!--meta property="og:image" content="http://wwww.mojojs.com/img/square-logo.png" /-->
-    <meta name="Paperclip" content="fast, compiled template engine for the DOM" />
+    <meta name="Paperclip" content="Paperclip is a template engine designed for the DOM. It works by leveraging the browser's built-in cloneNode() method whenever a template is used. The result is blazing-fast performance." />
 
 
   </head>
