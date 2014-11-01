@@ -153,7 +153,7 @@ Safe:
 {{ content }} <br />
 ```
 
-#### {{ #if: condition }}
+#### {{#if: condition }}
 
 Conditional block helper
 
@@ -174,7 +174,7 @@ Conditional block helper
 {{/}}
 ```
 
-#### {{#each:source}}
+#### {{#each: source }}
 
 Creates a list of items. 
 

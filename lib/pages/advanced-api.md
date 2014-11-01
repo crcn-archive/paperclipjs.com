@@ -70,4 +70,4 @@ the content template - this might be undefined if your block binding doesn't hav
 
 #### childTemplate
 
-The child block template. Used in the [conditional block](https://github.com/mojo-js/paperclip.js/blob/master/lib/paper/bindings/block/conditional.js).
+The child block template.
