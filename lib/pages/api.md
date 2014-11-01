@@ -183,7 +183,7 @@ template will be the iterated item itself.
 
 <!--
 {
-  items: _.range(4)
+  items: _.shuffle(_.range(4))
 }
 -->
 
