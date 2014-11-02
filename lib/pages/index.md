@@ -54,7 +54,7 @@ Paperclip doesn't do anything fancy to your templates. Everything's converted in
 
 Paperclip works in the browser, and on the server.
 
-[NPM](http://nodejs.com) Installation: 
+[NPM](http://nodejs.org) Installation: 
 
 `npm install paperclip --save-exact`
 
