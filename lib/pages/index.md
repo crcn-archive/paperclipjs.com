@@ -1,4 +1,4 @@
-Paperclip is a template engine designed for the DOM. It works by compiling templates to document fragments, then clones them whenever they're needed. The result is a template engine with <a href="https://pbs.twimg.com/media/B1Z3mHHCcAAk7Zc.png:large">very few moving parts</a>, and [insanely fast rendering](http://jsperf.com/pc-templating-comparison).
+Paperclip is a template engine designed for the DOM. It works by compiling templates to document fragments, then clones them whenever they're needed. The result is [blazing-fast rendering](http://jsperf.com/pc-templating-comparison) with <a href="https://pbs.twimg.com/media/B1Z3mHHCcAAk7Zc.png:large">very few moving parts</a>.
 
 <!--
 {
@@ -42,11 +42,11 @@ Unbound: {{~name}}
 
 <!-------------------------------------------------------------------
 
-## Interpolable
+## Interoperable
 
 Paperclip doesn't do anything fancy to your templates. Everything's converted into regular DOM nodes which you can easily manipulate after a view has been rendered. 
--->
 
+-->
 
 ------------------------------------------------------------------
 
