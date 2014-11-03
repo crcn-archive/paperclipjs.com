@@ -19,6 +19,20 @@ Rendering <strong>{{ numbers.length }}</strong> numbers: <br />
 
 ------------------------------------------------------------------
 
+## Interoperable
+
+Paperclip doesn't make any assumptions about your codebase. Easily integrate it into pre-existing frameworks such as Backbone, Angular, or Ember. Here's a [fast-repeat directive](http://plnkr.co/edit/dgalyKuVqJdfKLGJNdnm?p=preview) example:
+
+```html
+<ul>
+  <fastrepeat data="items" as="item">
+    <li>item {{item}}</li>
+  </fastrepeat>
+</ul>
+```
+
+------------------------------------------------------------------
+
 ## Explicit data bindings
 
 Paperclip comes with a set of operators that give you *complete* control over data flow. Define blocks that are unbound, two-way data-bound, or one-way data-bound.
