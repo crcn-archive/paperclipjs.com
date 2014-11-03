@@ -24,10 +24,8 @@ Rendering <strong>{{ numbers.length }}</strong> numbers: <br />
 Paperclip doesn't make any assumptions about your codebase. Easily integrate it into pre-existing frameworks such as Backbone, Angular, or Ember. Here's a [fast-repeat directive](http://plnkr.co/edit/dgalyKuVqJdfKLGJNdnm?p=preview) example:
 
 ```html
-<ul>
-  <fastrepeat data="items" as="item">
-    <li>item {{item}}</li>
-  </fastrepeat>
+<ul fast-repeat="data" fast-as="item">
+  <li>item {{item}}</li>
 </ul>
 ```
 
