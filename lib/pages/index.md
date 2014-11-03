@@ -70,13 +70,11 @@ Paperclip doesn't do anything fancy to your templates. Everything's converted in
 
 ## Installation
 
-Paperclip works in the browser, and on the server.
-
-[NPM](http://nodejs.org) Installation: 
+[NPM](http://nodejs.org): 
 
 `npm install paperclip --save-exact`
 
-[Bower](http://bower.io/) Installation: 
+[Bower](http://bower.io/): 
 
 `bower install paperclip`
 
