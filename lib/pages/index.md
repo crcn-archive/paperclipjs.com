@@ -21,7 +21,7 @@ Rendering <strong>{{ numbers.length }}</strong> numbers: <br />
 
 ## Interoperable
 
-Paperclip doesn't make any assumptions about your codebase. Easily integrate it into pre-existing applications that use frameworks such as Backbone, Angular, or Ember. For example, here's how you might implement a [fast-repeat directive](http://plnkr.co/edit/dgalyKuVqJdfKLGJNdnm?p=preview) for Angular:
+Paperclip doesn't make any assumptions about your codebase. Easily integrate it into applications that use frameworks such as Backbone, Angular, or Ember. For example, here's how you might implement a [fast-repeat directive](http://plnkr.co/edit/dgalyKuVqJdfKLGJNdnm?p=preview) for Angular:
 
 ```html
 <ul fast-repeat="data" fast-as="item">
