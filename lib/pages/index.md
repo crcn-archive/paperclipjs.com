@@ -52,7 +52,7 @@ Paperclip doesn't do anything fancy to your templates. Everything's converted in
 
 ------------------------------------------------------------------
 
-## Additional Features
+## Additional features
 
 ✔ Small CPU & memory footprint <br />
 ✔ [Templates are translated to JavaScript](https://gist.github.com/crcn/2565c78c03a4a65cb524)  <br />
@@ -75,7 +75,7 @@ Paperclip doesn't do anything fancy to your templates. Everything's converted in
 
 [NPM](http://nodejs.org): 
 
-`npm install paperclip --save-exact`
+`npm install paperclip`
 
 [Bower](http://bower.io/): 
 
@@ -112,9 +112,20 @@ Quick browser usage:
   </script>
 ```
 
+------------------------------------------------------------------
 
+## Command line usage
 
+Paperclip templates can also be compiled straight to javascript. This is a great utility if you want to pre-compile your templates for the browser, or want to use Paperclip in a module system such as requirejs, or browserify. In your project directory, simply run:
 
+```
+npm install paperclip
+```
 
+then run:
 
+```
+./node_modules/.bin/paperclip -i ./template.pc > ./template.pc.js
+```
 
+to compile templates into JavaScript.

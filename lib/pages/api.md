@@ -37,6 +37,23 @@ document.body.appendChild(template.view({
 }).render());
 ```
 
+#### paperclip.parser.parse(source)
+
+Parses your templates, and converts them into javascript.
+
+#### paperclip.parser.compile(source)
+
+compiles your templates into a javascript function.
+
+## Command Line Usage
+
+Paperclip comes with a command line utility for compiling templates to JavaScript. Simply install paperclip
+via NPM in your project, then run:
+
+```
+./node_modules/.bin/paperclip -i ./template.pc > ./template.pc.js
+```
+
 ## Block Syntax
 
 #### {{ blocks }}
