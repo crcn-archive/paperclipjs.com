@@ -55,6 +55,8 @@ Paperclip doesn't do anything fancy to your templates. Everything's converted in
 ## Additional Features
 
 ✔ Small CPU & memory footprint <br />
+✔ [Templates are translated to JavaScript](https://gist.github.com/crcn/2565c78c03a4a65cb524)  <br />
+✔  [Works with code coverage tools such as istanbul](https://cloud.githubusercontent.com/assets/757408/4878446/ab0896ba-630c-11e4-9d14-fa1fc0179b1e.png) <br />
 ✔ [Customizable block helpers](http://requirebin.com/?gist=858e3b7928eea5e1bed6) <br />
 ✔ Customizable rendering engine <br />
 <!--✔ No strange DOM manipulations / quirks <br />-->
@@ -62,6 +64,7 @@ Paperclip doesn't do anything fancy to your templates. Everything's converted in
 <!--✔ Rendered views are manipulable - paperclip won't overwrite any changes<br />-->
 ✔ Supports inline javascript <br />
 ✔ Works with old browsers (IE 8+) <br />
+✔ Unit testable <br />
 ✔ No browser dependencies <br />
 ✔ Accepts plain JS models <br />
 
