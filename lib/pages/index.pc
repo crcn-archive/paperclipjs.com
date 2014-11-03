@@ -8,8 +8,19 @@
         <p>A simple, yet powerful reactive template engine built for speed, and extensibility</p>
         <!--h4>Blazing-fast template engine designed specifically for the DOM</h4-->
         <a href="https://raw.githubusercontent.com/mojo-js/paperclip.js/master/dist/paperclip.min.js" class="btn btn-default btn-lg">Download Beta</a>
+        <a href="http://github.com/mojo-js/paperclip.js" class="btn btn-primary btn-lg">View on GitHub</a>
+
+         <div class="social">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://paperclipjs.com" data-via="mojoframework" data-hashtags="paperclipjs">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          <iframe src="http://ghbtns.com/github-btn.html?user=mojo-js&repo=paperclip.js&type=watch&count=true"
+      allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
       </div>
+      </div>
+
+     
     </div>
+
 
     <!--hr /-->
 
