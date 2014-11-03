@@ -37,4 +37,13 @@
 
   </div>
 
+  <!--script type="text/javascript">
+      var dataUrl = new Trianglify({
+      x_gradient: ["#FFF","#CFCFCF","#FFF"],
+      noiseIntensity: 0,
+      cellsize: 90}).generate(document.body.clientWidth, document.body.clientHeight).dataUrl;
+
+      document.body.setAttribute("style", "background-image: " + dataUrl);
+    </script-->
+
 {{/}}
