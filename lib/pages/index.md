@@ -54,13 +54,13 @@ Paperclip doesn't do anything fancy to your templates. Everything's converted in
 
 ## Additional Features
 
+✔ Small CPU & memory footprint <br />
 ✔ [Customizable block helpers](http://requirebin.com/?gist=858e3b7928eea5e1bed6) <br />
 ✔ Customizable rendering engine <br />
 <!--✔ No strange DOM manipulations / quirks <br />-->
 ✔ Interoperable with other libraries <br />
 <!--✔ Rendered views are manipulable - paperclip won't overwrite any changes<br />-->
-✔ Small CPU & memory footprint <br />
-✔ Inline javascript <br />
+✔ Supports inline javascript <br />
 ✔ Works with old browsers (IE 8+) <br />
 ✔ No browser dependencies <br />
 ✔ Accepts plain JS models <br />
