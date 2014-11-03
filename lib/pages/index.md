@@ -116,7 +116,7 @@ Quick browser usage:
 
 ## Command line usage
 
-Paperclip templates can also be compiled straight to javascript. This is a great utility if you want to pre-compile your templates for the browser, or want to use Paperclip in a module system such as requirejs, or browserify. In your project directory, simply run:
+Paperclip templates can also be compiled straight to javascript. This is a great utility if you want to pre-compile your templates for the browser, or want to use Paperclip in a module system such as [requirejs](http://requirejs.org/), or [browserify](http://browserify.org/). In your project directory, simply run:
 
 ```
 npm install paperclip
