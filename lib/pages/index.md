@@ -89,6 +89,30 @@ Development:
 
 `https://raw.githubusercontent.com/mojo-js/paperclip.js/master/dist/paperclip.js`
 
+Quick browser usage:
+
+```html
+  <script type="text/javascript" src="./paperclip.min.js"></script>
+
+  <script type="text/javascript">
+
+    // create the template. accepts a string, or pre-compiled template
+    var template = paperclip.template(
+      "hello {{message}}!"
+    );
+
+    // create the view from the template
+    var view = template.view({
+      message: "world"
+    });
+
+    // render the view, and append to the DOM
+    // Should say "hello world!"
+    document.body.appendChild(view.render());
+  </script>
+```
+
+
 
 
 
