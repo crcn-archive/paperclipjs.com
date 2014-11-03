@@ -1,4 +1,5 @@
 Paperclip is a template engine designed for the DOM. It works by compiling templates to document fragments, then clones them whenever they're needed. The result is [blazing-fast rendering](http://jsperf.com/pc-templating-comparison) with <a href="https://pbs.twimg.com/media/B1Z3mHHCcAAk7Zc.png:large">very few moving parts</a>.
+<br /><br />
 
 Paperclip will also only update the elements it needs to, so you can expect [highly efficient](http://requirebin.com/?gist=425cdb646205bb819477) user interfaces that won't lag when data changes. 
 
