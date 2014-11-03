@@ -1,25 +1,28 @@
 {{#layout:"main"}}
 
-  <div class="row subheader">
-    <div class="col-sm-12">
-      <h2>Compiled templates for the Browser, and NodeJS</h2>
-      <!--h4>Blazing-fast template engine designed specifically for the DOM</h4-->
-      <a href="https://raw.githubusercontent.com/mojo-js/paperclip.js/master/dist/paperclip.min.js" class="btn btn-default btn-lg">Download Beta</a>
+  <div class="home">
+
+    <div class="row subheader">
+      <div class="col-sm-12">
+        <h2>Compiled templates for the Browser, and NodeJS</h2>
+        <!--h4>Blazing-fast template engine designed specifically for the DOM</h4-->
+        <a href="https://raw.githubusercontent.com/mojo-js/paperclip.js/master/dist/paperclip.min.js" class="btn btn-default btn-lg">Download Beta</a>
+      </div>
     </div>
+
+    <!--hr /-->
+
+    <!-- getting started -->
+    <!-- block expressions -->
+    <!-- explicit data-bindings -->
+    <!-- modifiers -->
+    <!-- customizable -->
+
+    
+  <!--which can render around <strong>50,000</strong> items in under a second <span class="muted">ran on Chrome 36 using late 2013 13" macbook pro</span>.</p>-->
+
+    {{ html: (__dirname + "/index.md") | readfile | markdown }}
+
   </div>
-
-  <!--hr /-->
-
-  <!-- getting started -->
-  <!-- block expressions -->
-  <!-- explicit data-bindings -->
-  <!-- modifiers -->
-  <!-- customizable -->
-
-  
-<!--which can render around <strong>50,000</strong> items in under a second <span class="muted">ran on Chrome 36 using late 2013 13" macbook pro</span>.</p>-->
-
-  {{ html: (__dirname + "/index.md") | readfile | markdown }}
-
 
 {{/}}
