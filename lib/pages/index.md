@@ -9,10 +9,10 @@ Paperclip will also only update the elements it needs to, so you can expect [hig
 -->
 
 ```html
-Rendering <strong>{{numbers.length}}</strong> numbers: <br />
+Rendering <strong>{{ numbers.length }}</strong> numbers: <br />
 
-{{#each:numbers,as:'number'}}
-  {{number}} <br />
+{{#each: numbers, as:'number' }}
+  {{ number }} <br />
 {{/}}
 ```
 
@@ -38,8 +38,8 @@ What's your name?
 
 <input class="form-control" type="text" model="{{ <~>name }}"></input>
 
-Bound: {{name}} <br />
-Unbound: {{~name}}
+Bound: {{ name }} <br />
+Unbound: {{ ~name }}
 ```
 
 <!-------------------------------------------------------------------
@@ -49,6 +49,12 @@ Unbound: {{~name}}
 Paperclip doesn't do anything fancy to your templates. Everything's converted into regular DOM nodes which you can easily manipulate after a view has been rendered. 
 
 -->
+
+<!------------------------------------------------------------------
+
+## Extensible
+
+Paperclip -->
 
 ------------------------------------------------------------------
 
