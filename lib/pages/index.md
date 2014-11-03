@@ -17,7 +17,7 @@ Rendering <strong>{{ numbers.length }}</strong> numbers: <br />
 {{/}}
 ```
 
-<!--------------------------------------------------------------------
+-------------------------------------------------------------------
 
 ## Interoperable
 
@@ -30,7 +30,7 @@ Paperclip doesn't make any assumptions about your codebase. Easily integrate it 
   </fastrepeat>
 </ul>
 ```
--->
+
 ------------------------------------------------------------------
 
 ## Explicit data bindings
