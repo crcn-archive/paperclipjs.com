@@ -5,23 +5,15 @@ Paperclip will also only update the elements it needs to, so you can expect [hig
 
 <!--
 {
-  todos: _.shuffle(_.range(1000)).map(function (todo) {
-     return "todo " + todo;
-  })
+  numbers: _.shuffle(_.range(1000))
 }
 -->
 
 ```html
-<strong>{{ todos.length }}</strong> todos: <br />
+<strong>{{ numbers.length }}</strong> dynamic items: <br />
 
-{{#each: todos, as:'todo' }}
-  {{#if: edit }}
-    <input type="text" model="{{<~>todo}}" focus="{{true}}" onEnter="{{edit=false}}" ></input>
-  {{/else}}  
-    <div style="width:70px;display:inline-block;">{{~todo}}</div>
-    <a href="#" onClick="{{edit=true}}">edit</a> 
-    <br />
-  {{/}}
+{{#each: numbers, as:'number' }}
+  {{~number}} <br />
 {{/}}
 ```
 
