@@ -916,6 +916,11 @@
         }
       }
     },
+    "es5-shim": {
+      "version": "4.0.3",
+      "from": "es5-shim@*",
+      "resolved": "http://registry.npmjs.org/es5-shim/-/es5-shim-4.0.3.tgz"
+    },
     "express": {
       "version": "4.10.1",
       "from": "express@*",
