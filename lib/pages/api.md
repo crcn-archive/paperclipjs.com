@@ -20,7 +20,7 @@ binds the template to a context, and returns a document fragment
 ```javascript
 var pc = require("paperclip");
 var template = pc.template("hello {{name}}!");
-var view = template.view({ name: "Bull Murray" });
+var view = template.view({ name: "Bill Murray" });
 document.body.appendChild(view.render()); // will show "hello Bill Murray"
 ```
 
