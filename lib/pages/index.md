@@ -12,7 +12,7 @@ Paperclip will also only update the elements it needs to, so you can expect [hig
 ```html
 <strong>{{ numbers.length }}</strong> dynamic items: <br />
 
-{{#each: numbers, as:'number' }}
+{{#each: numbers, as: 'number' }}
   {{~number}} <br />
 {{/}}
 ```
