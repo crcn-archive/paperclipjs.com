@@ -7,13 +7,13 @@ Paperclip will also only update the elements it needs to, so you can expect [hig
 {
   numItems: 1000,
   repeat: function (count) {
-    return _.range(count);
+    return _.range(count).reverse();
   }
 }
 -->
 
 ```html
-Generate <input type="text" class="form-control" model="{{<~>numItems}}"></input> items: <br />
+Generate <input type="text" class="form-control" style="width:60px;display:inline-block;" model="{{<~>numItems}}"></input> items: <br />
 
 {{#each: repeat(numItems), as: 'number' }}
   {{~number}} <br />
