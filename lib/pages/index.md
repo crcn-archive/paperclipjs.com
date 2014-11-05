@@ -27,7 +27,7 @@ Generate <input type="text" class="form-control" style="width:60px;display:inlin
 
 ## Interoperable
 
-Paperclip doesn't make any assumptions about your codebase. Easily use paperclip in Backbone, Angular, or Ember-based applications. For example, here's how you might implement a [fast-repeat directive](http://plnkr.co/edit/dgalyKuVqJdfKLGJNdnm?p=preview) for Angular:
+Paperclip doesn't make any assumptions about your codebase. Easily use paperclip in [Backbone](https://github.com/mojo-js/backbone-paperclip), Angular, or Ember-based applications. For example, here's how you might implement a [fast-repeat directive](http://plnkr.co/edit/dgalyKuVqJdfKLGJNdnm?p=preview) for Angular:
 
 ```html
 <ul fast-repeat="data" fast-as="item">
