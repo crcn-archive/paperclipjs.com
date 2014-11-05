@@ -5,16 +5,20 @@ Paperclip will also only update the elements it needs to, so you can expect [hig
 
 <!--
 {
-  numbers: _.shuffle(_.range(1000))
+  numItems: 1000,
+  repeat: function (count) {
+    return _.range(count);
+  }
 }
 -->
 
 ```html
-<strong>{{ numbers.length }}</strong> dynamic items: <br />
+Generate <input type="text" class="form-control" model="{{<~>numItems}}"></input> items: <br />
 
-{{#each: numbers, as: 'number' }}
+{{#each: repeat(numItems), as: 'number' }}
   {{~number}} <br />
 {{/}}
+
 ```
 
 -------------------------------------------------------------------
