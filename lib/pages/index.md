@@ -13,6 +13,8 @@ Paperclip will also only update the elements it needs to, so you can expect [hig
 -->
 
 ```html
+<!-- speed demo for rendering a dynamic list of items -->
+
 Generate <input type="text" class="form-control" style="width:60px;display:inline-block;" model="{{<~>numItems}}"></input> items: <br />
 
 {{#each: repeat(numItems), as: 'number' }}
