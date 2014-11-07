@@ -13,7 +13,7 @@ var template = pc.template("hello {{name}}!");
 
 #### view template.view([context])
 
-Creates a new view which controls the cloned document fragment provided by the template. 
+Creates a new view which controls a cloned document fragment provided by the template. 
 
 `context` - Object, or [BindableObject](https://github.com/mojo-js/bindable-object.js). The context contains properties which get displayed in the template.
 
