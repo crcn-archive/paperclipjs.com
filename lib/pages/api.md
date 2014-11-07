@@ -13,9 +13,9 @@ var template = pc.template("hello {{name}}!");
 
 #### view template.view([context])
 
-`context` - Object, or [BindableObject](https://github.com/mojo-js/bindable-object.js). The context contains properties which get displayed in the template.
-
 Creates a new view which controls the cloned document fragment provided by the template. 
+
+`context` - Object, or [BindableObject](https://github.com/mojo-js/bindable-object.js). The context contains properties which get displayed in the template.
 
 #### view.render()
 
@@ -32,6 +32,14 @@ document.body.appendChild(view.render()); // will show "hello Bill Murray"
 
 Binds the view to a new context.
 
+```javascript
+var pc = require("paperclip");
+var template = pc.template("hello {{name}}!");
+var view = template.view({ name: "Bill Murray" });
+document.body.appendChild(view.render()); // will show "hello George Clooney"
+view.bind({ name: "Bill Clinton" }); // will show "hello Bill Clinton"
+```
+
 #### view.context
 
 The context that the view is currently bound to. This is a [BindableObject](https://github.com/mojo-js/bindable-object.js).
@@ -39,8 +47,8 @@ The context that the view is currently bound to. This is a [BindableObject](http
 ```javascript
 var tpl = paperclip.template("hello {{name}}!");
 var view = tpl.view({ name: "Will Smith" });
-document.body.appendChild(view.render());
-view.context.set("name", "Oprah Winfrey");
+document.body.appendChild(view.render());  // will show "hello Will Smith"
+view.context.set("name", "Oprah Winfrey");  // will show "hello Oprah Winfrey"
 ```
 
 #### view.remove()
