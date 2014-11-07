@@ -5,7 +5,6 @@
 
 Creates a new template
 
-
 ```javascript
 var pc = require("paperclip");
 var template = pc.template("hello {{name}}!");
@@ -68,11 +67,11 @@ document.body.appendChild(template.view({
 }).render());
 ```
 
-#### paperclip.parser.parse(source)
+#### String paperclip.parser.parse(source)
 
 Parses your templates, and converts them into javascript.
 
-#### paperclip.parser.compile(source)
+#### Function paperclip.parser.compile(source)
 
 compiles your templates into a javascript function.
 
