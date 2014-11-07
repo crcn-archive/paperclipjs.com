@@ -29,7 +29,7 @@ document.body.appendChild(view.render()); // will show "hello Bill Murray"
 
 #### view.bind(context)
 
-Binds the view to a new context.
+KBinds the view to a new context.2
 
 ```javascript
 var pc = require("paperclip");
@@ -47,6 +47,13 @@ The context that the view is currently bound to. This is a [BindableObject](http
 var tpl = paperclip.template("hello {{name}}!");
 var view = tpl.view({ name: "Will Smith" });
 document.body.appendChild(view.render());  // will show "hello Will Smith"
+
+// triggered whenever name has changed
+view.context.bind("name", function (name) {
+  console.log("name has changed!");
+});
+
+// only updates the elements bound to name
 view.context.set("name", "Oprah Winfrey");  // will show "hello Oprah Winfrey"
 ```
 
