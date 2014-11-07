@@ -11,11 +11,15 @@ var pc = require("paperclip");
 var template = pc.template("hello {{name}}!");
 ```
 
-#### template.view(context).render()
+#### view template.view([context])
 
-`context` - Object, or [BindableObject](https://github.com/mojo-js/bindable-object.js)
+`context` - Object, or [BindableObject](https://github.com/mojo-js/bindable-object.js). The context contains properties which get displayed in the template.
 
-binds the template to a context, and returns a document fragment
+Creates a new view which controls the cloned document fragment provided by the template. 
+
+#### view.render()
+
+Returns the cloned document fragment which can be added to the DOM.
 
 ```javascript
 var pc = require("paperclip");
@@ -23,6 +27,25 @@ var template = pc.template("hello {{name}}!");
 var view = template.view({ name: "Bill Murray" });
 document.body.appendChild(view.render()); // will show "hello Bill Murray"
 ```
+
+#### view.bind(context)
+
+Binds the view to a new context.
+
+#### view.context
+
+The context that the view is currently bound to. This is a [BindableObject](https://github.com/mojo-js/bindable-object.js).
+
+```javascript
+var tpl = paperclip.template("hello {{name}}!");
+var view = tpl.view({ name: "Will Smith" });
+document.body.appendChild(view.render());
+view.context.set("name", "Oprah Winfrey");
+```
+
+#### view.remove()
+
+Removes the views from the DOM.
 
 #### paperclip.modifier(modifierName, modifier)
 
@@ -154,7 +177,7 @@ Unbound helper - don't watch for any changes:
 
 #### {{ html: content }}
 
-Similar to escaping content in mustache (`{{{content}}}`). Good for security.
+Similar to escaping content in mustache (`{{{content}}}`). Good for security. The HTML block also accepts DOM nodes, and template views. 
 
 <!--
 {
@@ -197,6 +220,8 @@ Creates a list of items.
 
 - `as` - property to define for each iterated item. If this is omitted, the context of the embedded
 template will be the iterated item itself.
+
+> the source can be either an Array, or a [Bindable Collection](https://github.com/mojo-js/bindable-collection.js). Bindable Collections will allow you to dynamically update the `each` block outside of the template.
 
 <!--
 {
