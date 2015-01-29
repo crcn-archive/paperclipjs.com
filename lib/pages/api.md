@@ -218,7 +218,7 @@ Conditional block helper
 -->
 
 ```html
-<input type="text" class="form-control" placeholder="What's your age?" value="{{ <~>age }}"></input>
+<input type="text" class="form-control" placeholder="What's your age?" value={{ <~>age }}></input>
 
 <switch>
   <show when={{ age >= 18 }}>
@@ -269,7 +269,7 @@ Input data binding
 -->
 
 ```html
-<input type="text" class="form-control" placeholder="Type in a message" value="{{ <~>message }}"></input>
+<input type="text" class="form-control" placeholder="Type in a message" value={{ <~>message }}></input>
 <h3>{{message}}</h3>
 ```
 
@@ -284,7 +284,7 @@ Checked data binding
 -->
 
 ```html
-<input type="checkbox" class="form-control" placeholder="Type in a message" checked="{{ <~>checked }}"></input>
+<input type="checkbox" class="form-control" placeholder="Type in a message" checked={{ <~>checked }}></input>
 <show when={{checked}}>
   <h3>Checked!</h3>
 </show>
@@ -316,7 +316,7 @@ Executed when an event is fired on the DOM element. Here are all the available e
 -->
 
 ```html
-<input type="text" class="form-control" placeholder="Type in a message" onEnter="{{ enterPressed = true }}"></input>
+<input type="text" class="form-control" placeholder="Type in a message" onEnter={{ enterPressed = true }}></input>
 
 <show when={{enterPressed}}>
   <h3>enter pressed</h3>
