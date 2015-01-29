@@ -400,7 +400,7 @@ eases out an element
 
 ```html
 <button class="btn btn-primary" onClick="{{show=!show}}">{{show ? 'hide' : 'show'}} message</button>
-<show when="{{show==true}}">
+<show when="{{show}}">
   <h3 easeIn="{{fadeIn(transition)}}" easeOut="{{fadeOut(transition)}}">Hello World!</h3>
 </show>
 ```

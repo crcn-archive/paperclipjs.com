@@ -1,0 +1,113 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.1.4
+3 info using node@v0.10.30
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec { raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/craig/Developer/Public/paperclipjs.com',
+7 silly cache add   type: 'directory' }
+8 verbose tar pack [ '/Users/craig/.npm/paperclipjs.com/1.0.0/package.tgz',
+8 verbose tar pack   '/Users/craig/Developer/Public/paperclipjs.com' ]
+9 verbose tarball /Users/craig/.npm/paperclipjs.com/1.0.0/package.tgz
+10 verbose folder /Users/craig/Developer/Public/paperclipjs.com
+11 info prepublish paperclipjs.com@1.0.0
+12 verbose addLocalTarball adding from inside cache /Users/craig/.npm/paperclipjs.com/1.0.0/package.tgz
+13 silly cache afterAdd paperclipjs.com@1.0.0
+14 verbose afterAdd /Users/craig/.npm/paperclipjs.com/1.0.0/package/package.json not in flight; writing
+15 verbose afterAdd /Users/craig/.npm/paperclipjs.com/1.0.0/package/package.json written
+16 silly publish { name: 'paperclipjs.com',
+16 silly publish   version: '1.0.0',
+16 silly publish   description: 'Main website. 100% Mojo.',
+16 silly publish   main: './lib/index.js',
+16 silly publish   scripts: { start: 'node .' },
+16 silly publish   repository:
+16 silly publish    { type: 'git',
+16 silly publish      url: 'https://github.com/mojo-js/paperclipjs.com.git' },
+16 silly publish   author: '',
+16 silly publish   license: 'ISC',
+16 silly publish   bugs: { url: 'https://github.com/mojo-js/paperclipjs.com/issues' },
+16 silly publish   homepage: 'https://github.com/mojo-js/paperclipjs.com',
+16 silly publish   dependencies:
+16 silly publish    { 'bindable-collection': '0.0.x',
+16 silly publish      'bindable-object': '0.0.x',
+16 silly publish      brace: '^0.4.0',
+16 silly publish      'browserify-middleware': '^4.1.0',
+16 silly publish      compression: '^1.2.0',
+16 silly publish      'es5-shim': '^4.0.3',
+16 silly publish      express: '^4.10.1',
+16 silly publish      glob: '^4.0.6',
+16 silly publish      he: '^0.5.0',
+16 silly publish      less: '^1.7.5',
+16 silly publish      lodash: '^2.4.1',
+16 silly publish      marked: '^0.3.2',
+16 silly publish      memoizee: '^0.3.8',
+16 silly publish      paperclip: '0.7.x',
+16 silly publish      through: '^2.3.6',
+16 silly publish      traverse: '^0.6.6' },
+16 silly publish   devDependencies: { bower: '^1.3.12' },
+16 silly publish   readme: 'Main website. 100% Mojo.\n\n\n### Commands\n\n```\nnpm start       # start the server\nnpm run hotswap # run hotswap server\n```\n',
+16 silly publish   readmeFilename: 'README.md',
+16 silly publish   gitHead: '179d651eb312b6cb38d24740f4e02a84484dad04',
+16 silly publish   _id: 'paperclipjs.com@1.0.0',
+16 silly publish   _shasum: 'f1bd86cf9f8c3e28a5b53b2590cff5afadaefb7e',
+16 silly publish   _from: '.' }
+17 verbose mapToRegistry name paperclipjs.com
+18 verbose mapToRegistry uri http://registry.npmjs.org/paperclipjs.com
+19 verbose publish registryBase http://registry.npmjs.org/
+20 verbose request on initialization, where is /paperclipjs.com
+21 verbose request after pass 1, where is /paperclipjs.com
+22 verbose request url raw /paperclipjs.com
+23 verbose request resolving registry [ 'http://registry.npmjs.org/', './paperclipjs.com' ]
+24 verbose request after pass 2, where is http://registry.npmjs.org/paperclipjs.com
+25 verbose request sending authorization for write operation
+26 info attempt registry request try #1 at 07:02:44
+27 verbose request id 98af378b9aa8599c
+28 http request PUT http://registry.npmjs.org/paperclipjs.com
+29 http 403 http://registry.npmjs.org/paperclipjs.com
+30 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+30 verbose headers   'content-type': 'application/json',
+30 verbose headers   'cache-control': 'max-age=60',
+30 verbose headers   'content-length': '230',
+30 verbose headers   'accept-ranges': 'bytes',
+30 verbose headers   date: 'Thu, 29 Jan 2015 15:02:45 GMT',
+30 verbose headers   via: '1.1 varnish',
+30 verbose headers   connection: 'keep-alive',
+30 verbose headers   'x-served-by': 'cache-lax1432-LAX',
+30 verbose headers   'x-cache': 'MISS',
+30 verbose headers   'x-cache-hits': '0',
+30 verbose headers   'x-timer': 'S1422543764.567546,VS0,VE477' }
+31 error publish Failed PUT 403
+32 verbose stack Error: forbidden Attempting to modify version 1.0.0,
+32 verbose stack which was previously published on 2015-01-29T14:42:27.585Z.
+32 verbose stack This is forbidden, to maintain package integrity.
+32 verbose stack Please update the version number and try again.: paperclipjs.com
+32 verbose stack     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:260:14)
+32 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:197:65)
+32 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:237:22)
+32 verbose stack     at Request.emit (events.js:98:17)
+32 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1146:14)
+32 verbose stack     at Request.emit (events.js:117:20)
+32 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1097:12)
+32 verbose stack     at IncomingMessage.emit (events.js:117:20)
+32 verbose stack     at _stream_readable.js:938:16
+32 verbose stack     at process._tickCallback (node.js:419:13)
+33 verbose statusCode 403
+34 verbose pkgid paperclipjs.com
+35 verbose cwd /Users/craig/Developer/Public/paperclipjs.com
+36 error Darwin 14.0.0
+37 error argv "node" "/usr/local/bin/npm" "publish"
+38 error node v0.10.30
+39 error npm  v2.1.4
+40 error code E403
+41 error forbidden Attempting to modify version 1.0.0,
+41 error which was previously published on 2015-01-29T14:42:27.585Z.
+41 error This is forbidden, to maintain package integrity.
+41 error Please update the version number and try again.: paperclipjs.com
+42 error If you need help, you may report this error at:
+42 error     <http://github.com/npm/npm/issues>
+43 verbose exit [ 1, true ]
