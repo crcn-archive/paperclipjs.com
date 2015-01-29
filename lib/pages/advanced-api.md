@@ -1,73 +1,82 @@
-#### paperclip.blockBinding(name, blockBindingClass)
+#### paperclip.components
 
-Registers a new block binding class. Block bindings allow you to modify how templates behave. Some examples
-include the `{{#if:condition}}{{/}}`, and `{{html:content}}`.
+object containing all components. 
 
-#### BaseBlockBinding(options)
+#### paperclip.attributes
 
-Base class to extend when creating custom block bindings. Here's an example for a [components binding](http://requirebin.com/?gist=858e3b7928eea5e1bed6):
+object containing all attribute helpers. 
+
+#### paperclip.modifiers
+
+object containing all expression modifiers. 
+
+#### Component(options)
+
+Base class to extend when creating custom components.<!-- Here's an example for a [components binding](http://requirebin.com/?gist=858e3b7928eea5e1bed6):-->
 
 ```javascript
 var pc = require("paperclip");
 
-var ComponentBlockBinding = pc.BaseBlockBinding.extend({
-  bind: function (context) {
-    this.view = this.template.bind();
-    this.section.appendChild(this.view.render());
-    pc.BaseBlockBinding.prototype.bind.call(this, context);
+var HelloComponent = pc.Component.extend({
+
+  /**
+   * called when the component is created
+   */
+
+  initialize: function () {
+    this.textNode = this.nodeFactory.createTextNode("");
+    this.section.appendChild(this.textNode);
   },
-  didChange: function (properties) {
-    this.view.context.setProperties(properties);
+
+  /**
+   * called when the attributes change
+   */
+
+  update: function () {
+    // called when attributes change
+    this.textNode.nodeValue = "Hello " + this.attributes.message;
   }
 });
 
-pc.blockBinding("hello", ComponentBlockBinding.extend({
-  hello: pc.template("hello <strong>{{message}}</strong>!")
-});
+// register the component
+pc.components.hello = HelloComponent;
+
+var tpl = pc.template("<hello message={{message}} />");
+var view = tpl.view({message:"world"})
+
+document.body.appendChild(view.render()); // hello world
 ```
 
-template:
-
-```html
-{{ hello: { message: "world" }}}
 ```
 
 #### override bind(context)
 
 Called when the block is added, and bound to the DOM. This is where you initialize your binding.
-Be sure to call `paperclip.BaseBlockBinding.prototype.bind.call(this, context)` if you override.
+Be sure to call `paperclip.Component.prototype.bind.call(this, context)` if you override.
 this method
 
 #### override unbind()
 
 Called when the block is removed from the DOM. This is a cleanup method.
 
-#### override didChange(context)
+#### override update()
 
-Called whenever the properties change for the block binding. These properties are defined in the
-template. Here's the syntax:
+Called whenever the attributes change on the component. 
 
-```html
-{{blockName: blockProperties }}
-```
 
 #### nodeFactory
 
 the [node factory](https://github.com/mojo-js/nofactor.js) for creating elements. Use this to
-make your block binding compatible with the NodeJS and the browser.
+make your component compatible with the NodeJS and the browser.
 
-#### scriptName
+#### name
 
-the name registered for the block binding
+The component name.
 
 #### section
 
 the [document section](https://github.com/mojo-js/document-section.js) which contains all the elements
 
-#### contentTemplate
-
-the content template - this might be undefined if your block binding doesn't have `{{#block:properties}}content{{/}}`.
-
 #### childTemplate
 
-The child block template.
+The child template.
