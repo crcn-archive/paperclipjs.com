@@ -1449,7 +1449,7 @@
       }
     },
     "paperclip": {
-      "version": "0.7.17",
+      "version": "0.7.18",
       "from": "paperclip@>=0.7.0 <0.8.0",
       "dependencies": {
         "document-section": {
