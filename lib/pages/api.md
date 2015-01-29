@@ -121,9 +121,7 @@ function () {
     return age/number;
   };
 
-  paperclip.modifiers.round = function (age, number) {
-    return Math.round(number);
-  };
+  paperclip.modifiers.round = Math.round;
 
   return {
     age: 30
