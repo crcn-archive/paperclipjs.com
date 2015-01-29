@@ -6,7 +6,7 @@ Paperclip will also only update the elements it needs to, so you can expect [hig
 <!--
 {
   numItems: 1000,
-  repeat: function (count) {
+  range: function (count) {
     return _.range(Math.min(count, 20000)).reverse();
   }
 }
@@ -17,7 +17,7 @@ Paperclip will also only update the elements it needs to, so you can expect [hig
 
 Generate <input type="text" class="form-control" style="width:60px;display:inline-block;" value="{{<~>numItems}}"></input> items: <br />
 
-<repeat each={{repeat(numItems)}} as='number'>
+<repeat each={{ range(numItems) }} as='number'>
   {{~number}} <br />
 </repeat>
 ```
