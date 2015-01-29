@@ -61,35 +61,9 @@ view.context.set("name", "Oprah Winfrey");  // will show "hello Oprah Winfrey"
 
 Removes the views from the DOM.
 
-#### paperclip.modifier(modifierName, modifier)
+#### String paperclip.parse(source)
 
-registers a new modifier. 
-
-```javascript
-var pc = require("paperclip");
-pc.modifier("markdown", require("marked"));
-var template = pc.template("{{ content | markdown }}");
-document.body.appendChild(template.view({
-  content: "hello **world**!"
-}).render());
-```
-
-#### String paperclip.parser.parse(source)
-
-Parses your templates, and converts them into javascript.
-
-#### Function paperclip.parser.compile(source)
-
-compiles your templates into a javascript function.
-
-## Command Line Usage
-
-Paperclip comes with a command line utility for compiling templates to JavaScript. Simply install paperclip
-via NPM in your project, then run:
-
-```
-./node_modules/.bin/paperclip -i ./template.pc > ./template.pc.js
-```
+Translates a template into JavaScript.
 
 ## Block Syntax
 
@@ -207,6 +181,31 @@ Safe:
 {{ content }} <br />
 ```
 
+Or:
+
+```html
+<div unsafe.html={{content}} />
+```
+
+
+#### &lt;show when={{condition}} /&gt;
+
+Conditional helper
+
+<!--
+{
+  show: true
+}
+-->
+
+```html
+<show when={{show}}>
+  <h3>Hello World!</h3>
+</show>
+```
+
+
+
 #### &lt;switch /&gt;
 
 Conditional block helper
@@ -252,6 +251,14 @@ template will be the iterated item itself.
 <repeat each={{items}} as='i'>
   item {{i}} <br />
 </repeat>
+```
+
+Or:
+
+```html
+<ul repeat.each={{items}} repeat.as='i'>
+  <li>item {{i}} <br /></li>
+</ul>
 ```
 
 ## Attribute helpers
@@ -353,3 +360,11 @@ Focuses cursor on an element.
 ```
 
 
+## Command Line Usage
+
+Paperclip comes with a command line utility for compiling templates to JavaScript. Simply install paperclip
+via NPM in your project, then run:
+
+```
+./node_modules/.bin/paperclip -i ./template.pc > ./template.pc.js
+```
