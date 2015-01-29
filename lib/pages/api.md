@@ -16,6 +16,12 @@ Creates a new view which controls a cloned document fragment provided by the tem
 
 `context` - Object, or [BindableObject](https://github.com/mojo-js/bindable-object.js). The context contains properties which get displayed in the template.
 
+<!--
+#### Component template.component
+
+Returns a new component class for the template
+-->
+
 #### view.render()
 
 Returns the cloned document fragment which can be added to the DOM.
@@ -349,6 +355,54 @@ Focuses cursor on an element.
 
 ```html
 <input class="form-control" focus="{{ focus }}"></input>
+```
+
+#### easeIn={{ easer }}
+
+eases in an element
+
+<!--
+{
+  count: 10,
+  range: function (count) {
+    return _.range(count);
+  },
+  fadeIn: function (transition) {
+    $(transition.node).fadeIn();
+  },
+  fadeOut: function (transition) {
+    $(transition.node).fadeOut(transition.complete);
+  }
+}
+-->
+
+```html
+<input type='text' class="form-control" placeholder="num items" value="{{<~>count}}"></input>
+<ul repeat.each="{{ range(count) }}" repeat.as="i">
+    <li easeIn="{{fadeIn(transition)}}" easeOut="{{fadeOut(transition)}}">item {{i}}</li>
+</ul>
+```
+
+#### easeOut={{ easer }}
+
+eases out an element
+
+<!--
+{
+  fadeIn: function (transition) {
+    $(transition.node).fadeIn();
+  },
+  fadeOut: function (transition) {
+    $(transition.node).fadeOut(transition.complete);
+  }
+}
+-->
+
+```html
+<button class="btn btn-primary" onClick="{{show=!show}}">{{show ? 'hide' : 'show'}} message</button>
+<show when="{{show==true}}">
+  <h3 easeIn="{{fadeIn(transition)}}" easeOut="{{fadeOut(transition)}}">Hello World!</h3>
+</show>
 ```
 
 
