@@ -10,7 +10,7 @@ object containing all attribute helpers.
 
 object containing all expression modifiers. 
 
-#### Component(options)
+#### paperclip.Component(options)
 
 Base class to extend when creating custom components.<!-- Here's an example for a [components binding](http://requirebin.com/?gist=858e3b7928eea5e1bed6):-->
 
@@ -47,36 +47,75 @@ var view = tpl.view({message:"world"})
 document.body.appendChild(view.render()); // hello world
 ```
 
-```
-
-#### override bind(context)
+#### override component.bind(context)
 
 Called when the block is added, and bound to the DOM. This is where you initialize your binding.
 Be sure to call `paperclip.Component.prototype.bind.call(this, context)` if you override.
 this method
 
-#### override unbind()
+#### override component.unbind()
 
 Called when the block is removed from the DOM. This is a cleanup method.
 
-#### override update()
+#### override component.update()
 
 Called whenever the attributes change on the component. 
 
+#### component.context
 
-#### nodeFactory
+the context of the component
+
+#### component.nodeFactory
 
 the [node factory](https://github.com/mojo-js/nofactor.js) for creating elements. Use this to
 make your component compatible with the NodeJS and the browser.
 
-#### name
+#### component.name
 
 The component name.
 
-#### section
+#### component.section
 
 the [document section](https://github.com/mojo-js/document-section.js) which contains all the elements
 
-#### childTemplate
+#### component.childTemplate
 
 The child template.
+
+#### paperclip.Attribute
+
+The base attribute helper class. 
+
+```javascript
+var HelloAttribute = paperclip.Attribute.extend({
+  
+  /**
+   * called on instantiation
+   */
+
+  initialize: function () {
+  },
+
+  /**
+   * called wen attrs change
+   */
+
+  update: function () {
+
+  }
+});
+```
+
+#### attribute.key
+
+the attribute key
+
+
+#### attribute.value
+
+the attribute value
+
+#### attribute.context
+
+the context of the attribute
+
