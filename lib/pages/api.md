@@ -367,11 +367,11 @@ eases in an element
   range: function (count) {
     return _.range(count);
   },
-  fadeIn: function (transition) {
-    $(transition.node).fadeIn();
+  fadeIn: function (node) {
+    $(node).fadeIn();
   },
-  fadeOut: function (transition) {
-    $(transition.node).fadeOut(transition.complete);
+  fadeOut: function (node, complete) {
+    $(node).fadeOut(complete);
   }
 }
 -->
@@ -379,7 +379,7 @@ eases in an element
 ```html
 <input type='text' class="form-control" placeholder="num items" value="{{<~>count}}"></input>
 <ul repeat.each="{{ range(count) }}" repeat.as="i">
-    <li easeIn="{{fadeIn(transition)}}" easeOut="{{fadeOut(transition)}}">item {{i}}</li>
+    <li easeIn="{{fadeIn}}" easeOut="{{fadeOut}}">item {{i}}</li>
 </ul>
 ```
 
@@ -389,11 +389,11 @@ eases out an element
 
 <!--
 {
-  fadeIn: function (transition) {
-    $(transition.node).fadeIn();
+  fadeIn: function (node) {
+    $(node).fadeIn();
   },
-  fadeOut: function (transition) {
-    $(transition.node).fadeOut(transition.complete);
+  fadeOut: function (node, complete) {
+    $(node).fadeOut(complete);
   }
 }
 -->
@@ -401,7 +401,7 @@ eases out an element
 ```html
 <button class="btn btn-primary" onClick="{{show=!show}}">{{show ? 'hide' : 'show'}} message</button>
 <show when="{{show}}">
-  <h3 easeIn="{{fadeIn(transition)}}" easeOut="{{fadeOut(transition)}}">Hello World!</h3>
+  <h3 easeIn="{{fadeIn}}" easeOut="{{fadeOut}}">Hello World!</h3>
 </show>
 ```
 
