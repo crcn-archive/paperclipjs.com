@@ -173,7 +173,7 @@ Similar to escaping content in mustache (`{{{content}}}`). Good for security. Th
 
 ```html
 Unsafe:
-<unsafe html={{content}} /> <br />
+<unsafe html="{{content}}" /> <br />
 
 Safe:
 {{ content }} <br />
@@ -191,7 +191,7 @@ Conditional helper
 -->
 
 ```html
-<show when={{show}}>
+<show when="{{show}}">
   <h3>Hello World!</h3>
 </show>
 ```
