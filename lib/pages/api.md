@@ -179,12 +179,6 @@ Safe:
 {{ content }} <br />
 ```
 
-Or:
-
-```html
-<div unsafe.html={{content}} />
-```
-
 
 #### &lt;show when={{condition}} /&gt;
 
