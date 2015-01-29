@@ -1,1 +1,1 @@
-{{ html: content }}
+<unsafe html={{content}} />

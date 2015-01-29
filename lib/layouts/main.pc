@@ -35,7 +35,7 @@
         </div>
       </div>
 
-      {{html:blocks.main}}
+      <unsafe html={{blocks.main}} />
       
       <div class="row footer">
         <div class="col-sm-12">

@@ -1,4 +1,4 @@
-{{#layout:"main"}}
+<layout name="main">
 
   <div class="home">
 
@@ -31,19 +31,8 @@
     <!-- customizable -->
 
     
-  <!--which can render around <strong>50,000</strong> items in under a second <span class="muted">ran on Chrome 36 using late 2013 13" macbook pro</span>.</p>-->
-
-    {{ html: (__dirname + "/index.md") | readfile | markdown }}
+    <unsafe html={{ (__dirname + "/index.md") | readfile | markdown }} />
 
   </div>
 
-  <!--script type="text/javascript">
-      var dataUrl = new Trianglify({
-      x_gradient: ["#FFF","#CFCFCF","#FFF"],
-      noiseIntensity: 0,
-      cellsize: 90}).generate(document.body.clientWidth, document.body.clientHeight).dataUrl;
-
-      document.body.setAttribute("style", "background-image: " + dataUrl);
-    </script-->
-
-{{/}}
+</layout>

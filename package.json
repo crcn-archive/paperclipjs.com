@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/mojo-js/paperclipjs.com",
   "dependencies": {
-    "bindable-collection": "0.0.2",
-    "bindable-object": "0.0.6",
+    "bindable-collection": "0.0.x",
+    "bindable-object": "0.0.x",
     "brace": "^0.4.0",
     "browserify-middleware": "^4.1.0",
     "compression": "^1.2.0",
@@ -30,7 +30,7 @@
     "lodash": "^2.4.1",
     "marked": "^0.3.2",
     "memoizee": "^0.3.8",
-    "paperclip": "^0.6.14",
+    "paperclip": "0.7.x",
     "through": "^2.3.6",
     "traverse": "^0.6.6"
   },

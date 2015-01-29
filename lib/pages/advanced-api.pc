@@ -1,5 +1,5 @@
-{{#layout:"main"}}
+<layout name="main">
   <div class="api">
-    {{ html: (__dirname + "/advanced-api.md") | readfile | markdown }}
+    <unsafe html={{(__dirname + "/advanced-api.md") | readfile | markdown}} />
   </div>
-{{/}}
+</layout>

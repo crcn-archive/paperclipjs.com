@@ -23,9 +23,7 @@ function () {
 -->
 
 ```html
-<ul>
-  {{#each:dots,as:'dot'}}
-    <li>{{dot.i}}</li>
-  {{/}}
+<ul repeat.each={{dots}} repeat.as='dot'>
+  <li>{{dot.i}}</li>
 </ul>
 ```

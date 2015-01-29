@@ -2,12 +2,19 @@
 
   <div class="row tabs">
     <div class="col-sm-12">
-      {{#each:files, as:'file'}}
+
+      <repeat each={{files}} as='file'>
         <a href="#" class="tab {{ file.selected ? 'selected' : '' }}" onClick={{setFile(file)}}>{{file.name}}</a>
-      {{/}}
+      </repeat>
 
       <span class="benchmark">
-        {{#if:speed!=undefined}}{{speed}} ms{{/}} <button onClick={{ run() }}>run again</button>
+
+        <show when={{speed!=undefined}}>
+          {{speed}} ms
+        </show>
+
+        <button onClick={{ run() }}>run again</button>
+        
       </span>
     </div>
   </div>
@@ -15,12 +22,12 @@
   <div class="row content">
 
     <div class="editor col-sm-9">
-      {{ html: editor  }}
+      <unsafe html={{editor}} />
     </div>
 
     <div class="preview col-sm-3">
       <div class="preview-inner">
-        {{ html: preview }}
+        <unsafe html={{preview}} />
       </div>
     </div>
   </div>

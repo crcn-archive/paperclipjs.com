@@ -143,13 +143,13 @@ modifiers:
 <!--
 function () {
 
-  paperclip.modifier("divide", function (age, number) {
+  paperclip.modifiers.divide = function (age, number) {
     return age/number;
-  });
+  };
 
-  paperclip.modifier("round", function (number) {
+  paperclip.modifiers.round = function (age, number) {
     return Math.round(number);
-  });
+  };
 
   return {
     age: 30
@@ -174,22 +174,22 @@ specify whether to bind one way, two ways, or not at all. Here's the basic synta
 
 ```html
 Two-way binding:
-<input class="form-control" model="{{ <~>name }}" />
+<input class="form-control" value="{{ <~>name }}" />
 
 Bind input value to name only:
-<input class="form-control" model="{{ ~>name }}" />
+<input class="form-control" value="{{ ~>name }}" />
 
 Bind name to input value only:
 
-<input class="form-control" model="{{ <~name }}" />
+<input class="form-control" value="{{ <~name }}" />
 
 Unbound helper - don't watch for any changes:
 {{ ~name }}
 ```
 
-## Built-in block helpers
+## Built-in Components
 
-#### {{ html: content }}
+#### <unsafe html={{content}} />
 
 Similar to escaping content in mustache (`{{{content}}}`). Good for security. The HTML block also accepts DOM nodes, and template views. 
 
@@ -201,13 +201,13 @@ Similar to escaping content in mustache (`{{{content}}}`). Good for security. Th
 
 ```html
 Unsafe:
-{{ html: content }} <br />
+<unsafe html={{content}} /> <br />
 
 Safe:
 {{ content }} <br />
 ```
 
-#### {{#if: condition }}
+#### <switch />
 
 Conditional block helper
 
@@ -218,17 +218,22 @@ Conditional block helper
 -->
 
 ```html
-<input type="text" class="form-control" placeholder="What's your age?" model="{{ <~>age }}"></input>
-{{#if: age >= 18 }}
-  You're legally able to vote in the U.S.
-{{/elseif: age > 16 }}
+<input type="text" class="form-control" placeholder="What's your age?" value="{{ <~>age }}"></input>
+
+<switch>
+  <show when={{ age >= 18 }}>
+    You're legally able to vote in the U.S.
+  </show>
+  <show when={{ age > 16 }}>
   You're almost old enough to vote in the U.S.
-{{/else}}
-  You're too young to vote in the U.S.
-{{/}}
+    </show>
+  <show>
+    You're too young to vote in the U.S.
+  </show>
+</switch>
 ```
 
-#### {{#each: source }}
+#### <repeat each={{source}} as='item' />
 
 Creates a list of items. 
 
@@ -244,16 +249,16 @@ template will be the iterated item itself.
 -->
 
 ```html
-{{#each:items,as:"i"}}
+<repeat each={{items}} as='i'>
   item {{i}} <br />
-{{/}}
+</repeat>
 ```
 
 ## Attribute helpers
 
 Below are a list of data binding attributes you can use with elements.
 
-#### model={{ context }}
+#### value={{ context }}
 
 Input data binding
 
@@ -264,8 +269,25 @@ Input data binding
 -->
 
 ```html
-<input type="text" class="form-control" placeholder="Type in a message" model="{{ <~>message }}"></input>
+<input type="text" class="form-control" placeholder="Type in a message" value="{{ <~>message }}"></input>
 <h3>{{message}}</h3>
+```
+
+#### checked={{ context }}
+
+Checked data binding
+
+<!--
+{
+  checked: true
+}
+-->
+
+```html
+<input type="checkbox" class="form-control" placeholder="Type in a message" checked="{{ <~>checked }}"></input>
+<show when={{checked}}>
+  <h3>Checked!</h3>
+</show>
 ```
 
 Notice the `<~>` operator. This tells paperclip to bind both ways. See [binding operators](#binding-operators) for more info.
@@ -296,15 +318,11 @@ Executed when an event is fired on the DOM element. Here are all the available e
 ```html
 <input type="text" class="form-control" placeholder="Type in a message" onEnter="{{ enterPressed = true }}"></input>
 
-{{#if: enterPressed }}
-  enter pressed
-{{/}}
+<show when={{enterPressed}}>
+  <h3>enter pressed</h3>
+</show>
+
 ```
-
-#### show={{ bool }}
-
-Toggles the display mode of a given element. This is similar to the `{{if:expression}}` conditional helper.
-
 
 #### enable={{ bool }}
 
