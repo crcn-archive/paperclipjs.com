@@ -189,7 +189,7 @@ Unbound helper - don't watch for any changes:
 
 ## Built-in Components
 
-#### <unsafe html={{content}} />
+#### &lt;unsafe html={{content}} /&gt;
 
 Similar to escaping content in mustache (`{{{content}}}`). Good for security. The HTML block also accepts DOM nodes, and template views. 
 
@@ -207,7 +207,7 @@ Safe:
 {{ content }} <br />
 ```
 
-#### <switch />
+#### &lt;switch /&gt;
 
 Conditional block helper
 
@@ -233,7 +233,7 @@ Conditional block helper
 </switch>
 ```
 
-#### <repeat each={{source}} as='item' />
+#### &lt;repeat each={{source}} as='item' /&gt;
 
 Creates a list of items. 
 
