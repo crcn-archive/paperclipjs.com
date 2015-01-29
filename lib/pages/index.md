@@ -17,7 +17,7 @@ Paperclip will also only update the elements it needs to, so you can expect [hig
 
 Generate <input type="text" class="form-control" style="width:60px;display:inline-block;" value="{{<~>numItems}}"></input> items: <br />
 
-<repeat each={{ range(numItems) }} as='number'>
+<repeat each="{{ range(numItems) }}" as='number'>
   {{~number}} <br />
 </repeat>
 ```

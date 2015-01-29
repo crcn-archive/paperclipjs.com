@@ -209,13 +209,13 @@ Conditional block helper
 -->
 
 ```html
-<input type="text" class="form-control" placeholder="What's your age?" value={{ <~>age }}></input>
+<input type="text" class="form-control" placeholder="What's your age?" value="{{ <~>age }}"></input>
 
 <switch>
-  <show when={{ age >= 18 }}>
+  <show when="{{ age >= 18 }}">
     You're legally able to vote in the U.S.
   </show>
-  <show when={{ age > 16 }}>
+  <show when="{{ age > 16 }}">
   You're almost old enough to vote in the U.S.
     </show>
   <show>
@@ -240,7 +240,7 @@ template will be the iterated item itself.
 -->
 
 ```html
-<repeat each={{items}} as='i'>
+<repeat each="{{items}}" as="i">
   item {{i}} <br />
 </repeat>
 ```
@@ -248,7 +248,7 @@ template will be the iterated item itself.
 Or:
 
 ```html
-<ul repeat.each={{items}} repeat.as='i'>
+<ul repeat.each="{{items}}" repeat.as="i">
   <li>item {{i}} <br /></li>
 </ul>
 ```
@@ -268,7 +268,7 @@ Input data binding
 -->
 
 ```html
-<input type="text" class="form-control" placeholder="Type in a message" value={{ <~>message }}></input>
+<input type="text" class="form-control" placeholder="Type in a message" value="{{ <~>message }}"></input>
 <h3>{{message}}</h3>
 ```
 
@@ -283,8 +283,8 @@ Checked data binding
 -->
 
 ```html
-<input type="checkbox" class="form-control" placeholder="Type in a message" checked={{ <~>checked }}></input>
-<show when={{checked}}>
+<input type="checkbox" class="form-control" placeholder="Type in a message" checked="{{ <~>checked }}"></input>
+<show when="{{checked}}">
   <h3>Checked!</h3>
 </show>
 ```
@@ -315,9 +315,9 @@ Executed when an event is fired on the DOM element. Here are all the available e
 -->
 
 ```html
-<input type="text" class="form-control" placeholder="Type in a message" onEnter={{ enterPressed = true }}></input>
+<input type="text" class="form-control" placeholder="Type in a message" onEnter="{{ enterPressed = true }}"></input>
 
-<show when={{enterPressed}}>
+<show when="{{enterPressed}}">
   <h3>enter pressed</h3>
 </show>
 
@@ -334,7 +334,7 @@ Toggles the enabled state of an element.
 -->
 
 ```html
-<button class="btn btn-default" enable={{ formIsValid }}>Sign Up</button>
+<button class="btn btn-default" enable="{{ formIsValid }}">Sign Up</button>
 ```
 
 #### focus={{ bool }}
@@ -348,7 +348,7 @@ Focuses cursor on an element.
 -->
 
 ```html
-<input class="form-control" focus={{ focus }}></input>
+<input class="form-control" focus="{{ focus }}"></input>
 ```
 
 
