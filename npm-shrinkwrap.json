@@ -1449,12 +1449,17 @@
       }
     },
     "paperclip": {
-      "version": "0.7.19",
+      "version": "0.7.20",
       "from": "paperclip@>=0.7.0 <0.8.0",
       "dependencies": {
         "document-section": {
           "version": "0.2.10",
-          "from": "document-section@>=0.2.6 <0.3.0"
+          "from": "document-section@>=0.2.6 <0.3.0",
+          "resolved": "http://registry.npmjs.org/document-section/-/document-section-0.2.10.tgz"
+        },
+        "frame-runner": {
+          "version": "0.0.5",
+          "from": "frame-runner@>=0.0.0 <0.1.0"
         },
         "he": {
           "version": "0.4.1",
