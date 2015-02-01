@@ -40,7 +40,7 @@ template:
 
 ```html
 <div paperclip>
-  <ul repeat.each={{people}} repeat.as="person">
+  <ul repeat.each="{{people}}" repeat.as="person">
     <li>{{person}}</li>
   </ul>
 </div>
