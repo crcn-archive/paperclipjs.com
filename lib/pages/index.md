@@ -93,7 +93,7 @@ Paperclip doesn't do anything fancy to your templates. Everything's converted in
 
 [NPM](http://nodejs.org): 
 
-`npm install paperclip`
+`npm install paperclip --save`
 
 [Bower](http://bower.io/): 
 
