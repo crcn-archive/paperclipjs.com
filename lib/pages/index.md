@@ -31,9 +31,9 @@ Paperclip doesn't make any assumptions about your codebase. Easily use paperclip
 controller:
 
 ```javascript
-angular.module("app", ["paperclip"]).controller("myApp", function ($scope) {
+angular.module("app", ["paperclip"]).controller("myApp", ["$scope", function ($scope) {
   $scope.people = ["Jeff", "Sarah", "Eric", "Craig"];
-});
+}]);
 ```
 
 template:
