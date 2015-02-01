@@ -289,9 +289,15 @@ Checked data binding
 -->
 
 ```html
-<input type="checkbox" class="form-control" placeholder="Type in a message" checked="{{ <~>checked }}"></input>
+<div class="pull-right">
+    {{ checked ? "uncheck" : "check" }} me 
+    <input type="checkbox" checked="{{ <~>checked }}"></input> 
+</div> 
+
+<br />
+
 <show when="{{checked}}">
-  <h3>Checked!</h3>
+   <h3>Checked!</h3>
 </show>
 ```
 
