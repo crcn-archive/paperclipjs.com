@@ -1,9 +1,15 @@
 
 ## API
 
-#### template template(source)
+#### template template(source, options)
 
-Creates a new template
+Creates a new template.
+
+- `options` - options for the template
+  - `components` - component classes
+  - `attributes` - attribute helpers
+  - `modifiers`  - property modifiers
+  - `accessor`   - property accessor for the view context
 
 ```javascript
 var pc = require("paperclip");
@@ -14,13 +20,8 @@ var template = pc.template("hello {{name}}!");
 
 Creates a new view which controls a cloned document fragment provided by the template. 
 
-`context` - Object, or [BindableObject](https://github.com/mojo-js/bindable-object.js). The context contains properties which get displayed in the template.
-
-<!--
-#### Component template.component
-
-Returns a new component class for the template
--->
+- `context` - Can be anything. A backbone model, ember model, vanilla object. Be
+sure to specify the `template accessor` if this is other than plain-old object.
 
 #### view.render()
 
@@ -33,21 +34,17 @@ var view = template.view({ name: "Bill Murray" });
 document.body.appendChild(view.render()); // will show "hello Bill Murray"
 ```
 
-#### view.bind(context)
+#### view.set(key, value)
 
-KBinds the view to a new context.2
+Sets a property on the context of the view & updates the DOM.
 
-```javascript
-var pc = require("paperclip");
-var template = pc.template("hello {{name}}!");
-var view = template.view({ name: "Bill Murray" });
-document.body.appendChild(view.render()); // will show "hello George Clooney"
-view.bind({ name: "Bill Clinton" }); // will show "hello Bill Clinton"
-```
+#### view.setProperties(properties)
+
+Sets multiple properties on the view & updates the DOM.
 
 #### view.context
 
-The context that the view is currently bound to. This is a [BindableObject](https://github.com/mojo-js/bindable-object.js).
+The context that the view is currently bound to. This can be anything.
 
 ```javascript
 var tpl = paperclip.template("hello {{name}}!");

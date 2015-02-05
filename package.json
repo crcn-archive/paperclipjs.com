@@ -30,7 +30,7 @@
     "lodash": "^2.4.1",
     "marked": "^0.3.2",
     "memoizee": "^0.3.8",
-    "paperclip": "0.7.x",
+    "paperclip": "1.1.x",
     "through": "^2.3.6",
     "traverse": "^0.6.6"
   },
