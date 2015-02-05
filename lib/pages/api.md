@@ -234,7 +234,10 @@ Creates a list of items.
 - `as` - property to define for each iterated item. If this is omitted, the context of the embedded
 template will be the iterated item itself.
 
-> the source can be either an Array, or a [Bindable Collection](https://github.com/mojo-js/bindable-collection.js). Bindable Collections will allow you to dynamically update the `each` block outside of the template.
+> The source can be a vanilla array, or any other type of collection. Be sure to 
+implement `accessor.deserializeCollection` if you're providing a source that's different than
+an array.
+
 
 <!--
 {
