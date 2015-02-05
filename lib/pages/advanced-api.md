@@ -25,7 +25,7 @@ var pojoAccessor = {
    * can handle (do nothing)
    */
 
-  cast: function (object) { return object; },
+  castObject: function (object) { return object; },
 
   /**
    * calls a function on the object
@@ -125,18 +125,16 @@ var pojoAccessor = {
   },
 
   /**
-   * TODO - deserialize is improper. Maybe use
-   * 
    */
 
-  deserializeCollection: function (collection) {
+  normalizeCollection: function (collection) {
     return collection;
   },
 
   /**
    */
 
-  deserializeObject: function (object) {
+  normalizeObject: function (object) {
     return object;
   },
 

@@ -235,7 +235,7 @@ Creates a list of items.
 template will be the iterated item itself.
 
 > The source can be a vanilla array, or any other type of collection. Be sure to 
-implement `accessor.deserializeCollection` if you're providing a source that's different than
+implement `accessor.normalizeCollection` if you're providing a source that's different than
 an array.
 
 
