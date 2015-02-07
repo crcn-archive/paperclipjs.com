@@ -9,7 +9,7 @@ Creates a new template.
   - `components` - component classes
   - `attributes` - attribute helpers
   - `modifiers`  - property modifiers
-  - `accessor`   - property accessor for the view context
+  - `accessorClass`   - accessor class to use. Default is [POJO](https://github.com/mojo-js/paperclip.js/blob/master/lib/accessors/pojo.js) (dirty type checking).
 
 ```javascript
 var pc = require("paperclip");
@@ -45,20 +45,6 @@ Sets multiple properties on the view & updates the DOM.
 #### view.context
 
 The context that the view is currently bound to. This can be anything.
-
-```javascript
-var tpl = paperclip.template("hello {{name}}!");
-var view = tpl.view({ name: "Will Smith" });
-document.body.appendChild(view.render());  // will show "hello Will Smith"
-
-// triggered whenever name has changed
-view.context.bind("name", function (name) {
-  console.log("name has changed!");
-});
-
-// only updates the elements bound to name
-view.context.set("name", "Oprah Winfrey");  // will show "hello Oprah Winfrey"
-```
 
 #### view.remove()
 

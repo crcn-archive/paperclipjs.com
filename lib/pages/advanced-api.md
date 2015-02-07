@@ -3,22 +3,15 @@
 Accessor for the context of the view. Here's an example of a plain-old JavaScript accessor. Note that this is similar to how AngularJS works.
 
 ```javascript
-var pojoAccessor = {
 
-  /**
-   */
+var extend = require("xtend");
 
-  _getters: {},
+function POJOAccessor () {
+  this._getters  = {};
+  this._watchers = [];
+}
 
-  /**
-   */
-
-  _setters: {},
-
-  /**
-   */
-
-  _watchers: [],
+extend(POJOAccessor.prototype, {
 
   /**
    * casts an object into the proper type that the accessor
@@ -149,11 +142,11 @@ var pojoAccessor = {
 };
 
 // override the global accessor
-paperclip.accessor = pojoAccessor;
+paperclip.accessorClass = POJOAccessor;
 
 // or override the accessor of just the template
 var template = paperclip.template("hello {{name}}", {
-  accessor: pojoAccessor
+  accessorClass: POJOAccessor
 });
 
 var view = template.view({ name: "Ariel" });
