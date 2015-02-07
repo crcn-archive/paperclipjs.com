@@ -139,20 +139,22 @@ extend(POJOAccessor.prototype, {
       this._watchers[i].apply();
     }
   }
-};
+});
 
 // override the global accessor
 paperclip.accessorClass = POJOAccessor;
 
-// or override the accessor of just the template
+// or override the accessor class of just the template
 var template = paperclip.template("hello {{name}}", {
   accessorClass: POJOAccessor
 });
 
 var view = template.view({ name: "Ariel" });
 
-document.body.appendChild(view.render());
+// or set the accessor on the view
+view.accessor = new POJOAccessor();
 
+document.body.appendChild(view.render());
 
 ```
 
