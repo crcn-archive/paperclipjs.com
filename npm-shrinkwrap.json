@@ -1448,7 +1448,7 @@
       }
     },
     "paperclip": {
-      "version": "1.2.7",
+      "version": "1.2.9",
       "from": "paperclip@>=1.1.0 <2.0.0",
       "dependencies": {
         "browserify": {
