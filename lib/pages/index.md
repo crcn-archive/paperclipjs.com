@@ -26,7 +26,7 @@ Generate <input type="text" class="form-control" style="width:60px;display:inlin
 
 ## Interoperable
 
-Paperclip doesn't make any assumptions about your codebase. Easily use paperclip in [Backbone](http://jsfiddle.net/3o4622z3/2/), [Angular](https://github.com/mojo-js/ng-paperclip), or Ember-based applications. Here's an [example](http://plnkr.co/edit/w30ufhDiQb43mHt9UCYd?p=preview) of how you might use [ng-paperclip](https://github.com/mojo-js/ng-paperclip) with AngularJS:
+Paperclip doesn't make any assumptions about your codebase. Easily use paperclip in [Backbone](http://jsfiddle.net/3o4622z3/2/), [Angular](https://github.com/mojo-js/ng-paperclip), or Ember-based applications. Here's an example of how you might use [ng-paperclip](https://github.com/mojo-js/ng-paperclip) with AngularJS:
 
 controller:
 
