@@ -85,7 +85,7 @@ Paperclip doesn't do anything fancy to your templates. Everything's converted in
 ## Additional features
 
 ✔ Small CPU footprint <br />
-✔ Small file size (17kb gzipped) <br />
+✔ Small file size (41kb gzipped) <br />
 ✔ Accepts plain JS models <br />
 ✔ [Templates are translated to JavaScript](https://gist.github.com/crcn/2565c78c03a4a65cb524)  <br />
 ✔  [Works with code coverage tools such as istanbul](https://cloud.githubusercontent.com/assets/757408/4878446/ab0896ba-630c-11e4-9d14-fa1fc0179b1e.png) <br />
