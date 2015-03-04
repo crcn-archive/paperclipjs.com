@@ -14,7 +14,7 @@
     <title>Paperclip.js - fast, reactive template engine for the DOM</title>
 
     <!--meta property="og:image" content="http://wwww.mojojs.com/img/square-logo.png" /-->
-    <meta name="Paperclip" content="A simple, yet powerful reactive template engine built for speed, and extensibility" />
+    <meta name="Paperclip" content="A simple, yet powerful reactive template engine built for speed, and extensibility">
 
 
   </head>
