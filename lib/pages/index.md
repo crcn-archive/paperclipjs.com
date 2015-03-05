@@ -1,4 +1,4 @@
-Paperclip is a reactive template engine that compiles templates to DOM, and only changes the parts it needs to. The result is [blazing-fast rendering](http://paperclip-dbmonster.herokuapp.com/) with <a href="https://pbs.twimg.com/media/B1Z3mHHCcAAk7Zc.png:large">very few moving parts</a>.
+Paperclip is a reactive template engine that compiles HTML to DOM, and only changes the parts it needs to. The result is [blazing-fast rendering](http://paperclip-dbmonster.herokuapp.com/) with <a href="https://pbs.twimg.com/media/B1Z3mHHCcAAk7Zc.png:large">very few moving parts</a>.
 <br />
 
 <!--
