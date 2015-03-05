@@ -1,3 +1,5 @@
+<!--PaperclipJS is a virtual DOM implementation that transpiles templates straight to JavaScript. All optimizations are done at compile-time. -->
+
 Paperclip is a reactive template engine that compiles HTML to DOM, and only changes the parts it needs to. The result is [blazing-fast rendering](http://paperclip-dbmonster.herokuapp.com/) with <a href="https://cloud.githubusercontent.com/assets/757408/6500910/c1091c90-c2c6-11e4-953c-452ed5717daf.png">very few moving parts</a>.
 <br />
 
