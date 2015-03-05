@@ -5,7 +5,7 @@
     <div class="row subheader">
       <div class="col-sm-12">
         <h2>Compiled templates for the Browser, and NodeJS</h2>
-        <p>A simple, yet powerful reactive template engine built for speed, and extensibility</p>
+        <p>A reactive template engine for modern web applications</p>
         <!--h4>Blazing-fast template engine designed specifically for the DOM</h4-->
         <a href="https://raw.githubusercontent.com/mojo-js/paperclip.js/master/dist/paperclip.min.js" class="btn btn-default btn-lg">Download Beta</a>
         <a href="http://github.com/mojo-js/paperclip.js" class="btn btn-primary btn-lg">View on GitHub</a>
