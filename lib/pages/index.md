@@ -1,4 +1,4 @@
-Paperclip is a reactive template engine that compiles HTML to DOM. All optimizations happen at compile time, so you can expect [snappy](http://paperclip-dbmonster.herokuapp.com/) and [efficient](https://cloud.githubusercontent.com/assets/757408/6500910/c1091c90-c2c6-11e4-953c-452ed5717daf.png) user interfaces across web, and mobile devices. 
+Paperclip is a reactive template engine that compiles HTML to DOM. All optimizations happen at compile time, so you can expect [snappy](http://paperclip-dbmonster.herokuapp.com/) and [efficient](https://cloud.githubusercontent.com/assets/757408/6500910/c1091c90-c2c6-11e4-953c-452ed5717daf.png) user interfaces across desktop, and mobile devices. 
 
 <br />
 
