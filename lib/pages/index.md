@@ -1,7 +1,6 @@
-Paperclip is a reactive template engine designed for the DOM. It works by compiling templates to document fragments, then clones them whenever they're needed. The result is [blazing-fast rendering](http://paperclip-dbmonster.herokuapp.com/) with <a href="https://pbs.twimg.com/media/B1Z3mHHCcAAk7Zc.png:large">very few moving parts</a>.
-<br /><br />
+Paperclip is a reactive template engine that compiles HTML to DOM. All optimizations happen at compile time, so you can expect [snappy](http://paperclip-dbmonster.herokuapp.com/) and [efficient](https://cloud.githubusercontent.com/assets/757408/6500910/c1091c90-c2c6-11e4-953c-452ed5717daf.png) user interfaces across desktop, and mobile devices. 
 
-Paperclip will also only update the elements it needs to, so you can expect highly efficient user interfaces that won't lag when data changes. 
+<br />
 
 <!--
 {
@@ -54,31 +53,21 @@ Bound: {{ name }} <br />
 Unbound: {{ ~name }}
 ```
 
-<!-------------------------------------------------------------------
-
-## Interoperable
-
-Paperclip doesn't do anything fancy to your templates. Everything's converted into regular DOM nodes which you can easily manipulate after a view has been rendered. 
-
--->
-
 ------------------------------------------------------------------
+
 
 ## Additional features
 
-✔ Small CPU footprint <br />
+✔ Isomorphic <br />
+✔ Small CPU & Memory footprint <br />
 ✔ Small file size (41kb gzipped) <br />
 ✔ Accepts plain JS models <br />
-✔ [Templates are translated to JavaScript](https://gist.github.com/crcn/2565c78c03a4a65cb524)  <br />
-✔  [Works with code coverage tools such as istanbul](https://cloud.githubusercontent.com/assets/757408/4878446/ab0896ba-630c-11e4-9d14-fa1fc0179b1e.png) <br />
-<!--✔ [Customizable block helpers](http://requirebin.com/?gist=858e3b7928eea5e1bed6) <br />-->
+✔ Optimizations happen at compile time <br />
 ✔ Customizable rendering engine <br />
-<!--✔ No strange DOM manipulations / quirks <br />-->
-✔ Interoperable with other libraries <br />
-<!--✔ Rendered views are manipulable - paperclip won't overwrite any changes<br />-->
+✔ Interoperable with other libraries using [accessors](http://paperclipjs.com/advanced-api) <br />
 ✔ Supports inline javascript <br />
 ✔ Works with old browsers (IE 8+) <br />
-✔ Unit testable <br />
+✔ Unit testable in NodeJS <br />
 ✔ No browser dependencies <br />
 
 
