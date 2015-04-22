@@ -81,7 +81,7 @@ extend(POJOAccessor.prototype, {
    */
 
   watchProperty: function (object, path, listener) {
-    
+
     var self = this;
     var watcher = {
       context: object,
@@ -93,9 +93,9 @@ extend(POJOAccessor.prototype, {
         listener(newValue, this.currentValue);
       }
     };
-    
+
     this._watchers.push(watcher);
-    
+
     return {
       trigger: function(){
         watcher.apply();
@@ -160,15 +160,15 @@ document.body.appendChild(view.render());
 
 #### paperclip.components
 
-Object containing all components. 
+Object containing all components.
 
 #### paperclip.attributes
 
-Object containing all attribute helpers. 
+Object containing all attribute helpers.
 
 #### paperclip.modifiers
 
-Object containing all expression modifiers. 
+Object containing all expression modifiers.
 
 #### paperclip.Component(options)
 
@@ -184,7 +184,7 @@ var HelloComponent = pc.Component.extend({
    */
 
   initialize: function () {
-    this.textNode = this.nodeFactory.createTextNode("");
+    this.textNode = this.document.createTextNode("");
     this.section.appendChild(this.textNode);
   },
 
@@ -219,16 +219,16 @@ Called when the block is removed from the DOM. This is a cleanup method.
 
 #### override component.update()
 
-Called whenever the attributes change on the component. 
+Called whenever the attributes change on the component.
 
 #### component.context
 
 the context of the component
 
-#### component.nodeFactory
+#### component.document
 
-The [node factory](https://github.com/mojo-js/nofactor.js) for creating elements. Use this to
-make your component compatible with the NodeJS and the browser.
+The `document` for creating elements. Use this property instead of the global `document` property
+to make your components interoperable between server-side & browser-side rendering.
 
 #### component.name
 
@@ -244,11 +244,11 @@ The child template.
 
 #### paperclip.Attribute
 
-The base attribute helper class. 
+The base attribute helper class.
 
 ```javascript
 var HelloAttribute = paperclip.Attribute.extend({
-  
+
   /**
    * called on instantiation
    */
@@ -277,4 +277,3 @@ The attribute value.
 #### attribute.context
 
 The context of the attribute.
-
