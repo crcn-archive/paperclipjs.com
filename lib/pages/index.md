@@ -25,7 +25,7 @@ Generate <input type="text" class="form-control" style="width:60px;display:inlin
 
 ## Interoperable
 
-Paperclip doesn't make any assumptions about your codebase. Easily use paperclip in [Backbone](http://jsfiddle.net/3o4622z3/2/), Anglar, or Ember-based applications.
+Paperclip doesn't make any assumptions about your codebase. Easily use paperclip in [Backbone](http://jsfiddle.net/3o4622z3/2/), Angluar, or Ember-based applications.
 
 ------------------------------------------------------------------
 
