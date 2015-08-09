@@ -1,4 +1,4 @@
-Paperclip is a reactive template engine that compiles HTML to DOM. All optimizations happen at compile time, so you can expect [snappy](http://paperclip-dbmonster.herokuapp.com/) and [efficient](https://cloud.githubusercontent.com/assets/757408/6500910/c1091c90-c2c6-11e4-953c-452ed5717daf.png) user interfaces across desktop, and mobile devices. 
+Paperclip is a reactive template engine that compiles HTML to DOM. All optimizations happen at compile time, so you can expect [snappy](http://paperclip-dbmonster.herokuapp.com/) and [efficient](https://cloud.githubusercontent.com/assets/757408/6500910/c1091c90-c2c6-11e4-953c-452ed5717daf.png) user interfaces across desktop, and mobile devices.
 
 <br />
 
@@ -42,7 +42,7 @@ Paperclip comes with a set of operators that give you *complete* control over da
 ```html
 What's your name?
 
-<!-- 
+<!--
   <~> - bind both ways
   ~   - don't watch for changes
 -->
@@ -75,11 +75,11 @@ Unbound: {{ ~name }}
 
 ## Installation
 
-[NPM](http://nodejs.org): 
+[NPM](http://nodejs.org):
 
 `npm install paperclip --save`
 
-[Bower](http://bower.io/): 
+[Bower](http://bower.io/):
 
 `bower install paperclip`
 

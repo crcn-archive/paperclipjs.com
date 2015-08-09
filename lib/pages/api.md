@@ -9,16 +9,18 @@ Creates a new template.
   - `components` - component classes
   - `attributes` - attribute helpers
   - `modifiers`  - property modifiers
-  - `accessorClass`   - accessor class to use. Default is [POJO](https://github.com/mojo-js/paperclip.js/blob/master/lib/accessors/pojo.js) (dirty type checking).
+  - `viewClass`  - view class to use
+  - `document`   - the document to use. Useful if you want to change the rendering engine.
+  - `compile`    - method for compiling a template into javascript
 
 ```javascript
-var pc = require("paperclip");
+var pc       = require("paperclip");
 var template = pc.template("hello {{name}}!");
 ```
 
 #### view template.view([context])
 
-Creates a new view which controls a cloned document fragment provided by the template. 
+Creates a new view which controls a cloned document fragment provided by the template.
 
 - `context` - Can be anything. A backbone model, ember model, vanilla object. Be
 sure to specify the `template accessor` if this is other than plain-old object.
@@ -49,10 +51,6 @@ The context that the view is currently bound to. This can be anything.
 #### view.remove()
 
 Removes the views from the DOM.
-
-#### String paperclip.parse(source)
-
-Translates a template into JavaScript.
 
 ## Block Syntax
 
@@ -152,7 +150,7 @@ Unbound helper - don't watch for any changes:
 
 #### &lt;unsafe html={{content}} /&gt;
 
-Similar to escaping content in mustache (`{{{content}}}`). Good for security. The HTML block also accepts DOM nodes, and template views. 
+Similar to escaping content in mustache (`{{{content}}}`). Good for security. The HTML block also accepts DOM nodes, and template views.
 
 <!--
 {
@@ -215,12 +213,12 @@ Conditional block helper
 
 #### &lt;repeat each={{source}} as='item' /&gt;
 
-Creates a list of items. 
+Creates a list of items.
 
 - `as` - property to define for each iterated item. If this is omitted, the context of the embedded
 template will be the iterated item itself.
 
-> The source can be a vanilla array, or any other type of collection. Be sure to 
+> The source can be a vanilla array, or any other type of collection. Be sure to
 implement `accessor.normalizeCollection` if you're providing a source that's different than
 an array.
 
@@ -240,8 +238,8 @@ an array.
 Or:
 
 ```html
-<ul repeat.each="{{items}}" repeat.as="i">
-  <li>item {{i}} <br /></li>
+<ul>
+  <li repeat.each="{{items}}" repeat.as="i">item {{i}} <br /></li>
 </ul>
 ```
 
@@ -276,9 +274,9 @@ Checked data binding
 
 ```html
 <div class="pull-right">
-    {{ checked ? "uncheck" : "check" }} me 
-    <input type="checkbox" checked="{{ <~>checked }}"></input> 
-</div> 
+    {{ checked ? "uncheck" : "check" }} me
+    <input type="checkbox" checked="{{ <~>checked }}"></input>
+</div>
 
 <br />
 
@@ -308,7 +306,7 @@ Executed when an event is fired on the DOM element. Here are all the available e
 
 <!--
 {
-  
+
 }
 -->
 
@@ -370,8 +368,8 @@ eases in an element
 
 ```html
 <input type='text' class="form-control" placeholder="num items" value="{{<~>count}}"></input>
-<ul repeat.each="{{ range(count) }}" repeat.as="i">
-    <li easeIn="{{fadeIn}}" easeOut="{{fadeOut}}">item {{i}}</li>
+<ul>
+    <li repeat.each="{{ range(count) }}" repeat.as="i" easein="{{fadeIn}}" easeout="{{fadeOut}}">item {{i}}</li>
 </ul>
 ```
 
@@ -404,5 +402,5 @@ Paperclip comes with a command line utility for compiling templates to JavaScrip
 via NPM in your project, then run:
 
 ```
-./node_modules/.bin/paperclip -i ./template.pc > ./template.pc.js
+cat ./template.pc | ./node_modules/.bin/paperclip > ./template.js
 ```

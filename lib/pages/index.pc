@@ -18,7 +18,7 @@
       </div>
       </div>
 
-     
+
     </div>
 
 
@@ -30,7 +30,6 @@
     <!-- modifiers -->
     <!-- customizable -->
 
-    
     <unsafe html={{ (__dirname + "/index.md") | readfile | markdown }} />
 
   </div>

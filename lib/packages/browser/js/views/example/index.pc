@@ -4,7 +4,7 @@
     <div class="col-sm-12">
 
       <repeat each={{files}} as='file'>
-        <a href="#" class="tab {{ file.selected ? 'selected' : '' }}" onClick={{setFile(file)}}>{{file.name}}</a>
+        <a href="#" class="tab {{ file.selected ? 'selected' : '' }}" onclick={{setFile.bind(this, file)}}>{{file.name}}</a>
       </repeat>
 
       <span class="benchmark">
@@ -13,8 +13,8 @@
           {{speed}} ms
         </show>
 
-        <button onClick={{ run() }}>run again</button>
-        
+        <button onclick={{ run }}>run again</button>
+
       </span>
     </div>
   </div>
