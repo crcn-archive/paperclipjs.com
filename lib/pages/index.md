@@ -4,26 +4,21 @@ Paperclip was designed for interoperability, and customization. Incorporate it i
 
 <br />
 
-
 <!--
-## Any rendering engine
-
-Paperclip works with any rendering engine. Easily build sophisticated user interfaces that interoperate between DOM, WebGL, Canvas, SVG, and more. Here's a simple [pixi.js demo](https://github.com/mojo-js/paperclip.js/tree/master/examples/common/documents/pixi):
-
-index.js:
-
-```javascript
-
-```
-
-template.pc:
+{
+  numItems: 1000,
+  range: function (count) {
+    return _.range(Math.min(count, 20000)).reverse();
+  }
+}
+-->
 
 ```html
-How many bunnies? <input type="text" value={{<~>numBunnies}}></input>
+<!-- speed demo for rendering a dynamic list of items -->
 
-<pixi>
-    <repeat each={{range(numBunnies)}} as='bunny'>
-    </repeat>
-</pixi>
+Generate <input type="text" class="form-control" style="width:60px;display:inline-block;" value="{{<~>numItems}}"></input> items: <br />
+
+<repeat each="{{ range(numItems) }}" as='number'>
+  {{~number}} <br />
+</repeat>
 ```
--->
