@@ -1,4 +1,4 @@
-Main website. 100% Mojo.
+Main website. Much Mojo.
 
 
 ### Commands

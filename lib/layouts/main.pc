@@ -30,18 +30,17 @@
         </div>
         <div class="links">
           <!--a href="/perf">Performance</a-->
-          <a href="/api">API</a>
-          <a href="/advanced-api">Advanced API</a>
+          <a href="https://github.com/crcn/paperclip.js/tree/master/docs">API</a>
           <a href="https://groups.google.com/forum/#!forum/paperclipjs">Discuss</a>
         </div>
       </div>
 
       <unsafe html={{blocks.main}} />
-      
+
       <div class="row footer">
         <div class="col-sm-12">
-          Released under the <a href="http://opensource.org/licenses/mit-license.php">MIT License</a><br />
-          Built by <a href="http://craigjefferds.com">Craig Condon</a>
+          Released under the <a href="//opensource.org/licenses/mit-license.php">MIT License</a><br />
+          Built by <a href="//crcn.io">Craig Condon</a>
         </div>
       </div>
 
