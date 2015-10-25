@@ -1,3 +1,0 @@
-<layout name="main">
-  <unsafe html={{(__dirname + "/perf.md") | readfile | markdown}} />
-</layout>

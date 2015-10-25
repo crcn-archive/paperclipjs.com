@@ -1,5 +1,0 @@
-<layout name="main">
-  <div class="api">
-    <unsafe html={{(__dirname + "/advanced-api.md") | readfile | markdown}} />
-  </div>
-</layout>
